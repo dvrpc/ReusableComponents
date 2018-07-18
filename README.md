@@ -1,7 +1,7 @@
 # ReusableComponents
 Code snippets that can be re-used across different projects to speed up development
-\
-\
+<br />
+<br />
 
 ## js
 Assorted javascript functions that can be used across pages
