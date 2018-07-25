@@ -1,0 +1,42 @@
+/* ---------- */
+/* Accordion(s)*/
+/* ---------- */
+
+/* See accordions.js for functionality & accordions.html for structure*/
+
+.accordion-controls{
+    padding: 0;
+    list-style-type: none;
+}
+.accordion{
+    margin-top: 5%;
+    background-color: #eee; /*replace w/colors of your choice*/
+    font-size: 1.1em;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    transition: 0.4s;
+    cursor: pointer;
+    outline: none;
+    border-bottom: thin solid #976826; /*replace w/colors of your choice*/
+    border-left: medium solid #976826; /*replace w/colors of your choice*/
+    border-top: none;
+    border-right: none;
+}
+.accordion:after{
+    content: '\02795';
+    float: right;
+}
+.active, .accordion:hover{
+    background-color: #ccc; /*replace w/colors of your choice*/
+}
+.active:after{
+    content: '\2212';
+}
+.panel{
+    background: #fff; /*replace w/colors of your choice*/
+    padding: 0 18px;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+}
