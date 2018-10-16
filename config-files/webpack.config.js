@@ -1,5 +1,5 @@
 /*
-    NOTE: This configuration set-up is for webpack < v4.
+    NOTE: This configuration set-up is for webpack < v4. You will have to import each image that you're using within your application if using file-loader
     @TODO:
         Update this for webpack v4
 */
@@ -9,11 +9,15 @@ var path = require('path'),
         HTMLWebpackPlugin = require('html-webpack-plugin'),
         ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+const extractPlugin = new ExtractTextPlugin({
+    filename: './bundle.styles.css'
+})
 module.exports = {
-    entry: `./src/app.js`, // main JS file for application
+    context: path.resolve(__dirname, 'src'),
+    entry: `./app.js`, // main JS file for application
     output: {
-        path: `${__dirname}/dist`, // defining output path for build files
-        filename: '[name].bundle.js' // defining naming convention for bundled dist file
+        path: path.resolve(__dirname, 'dist'), // defining output path for build files
+        filename: 'js/[name].bundle.js' // defining naming convention for bundled dist file
     },
     module: {
         rules : [
@@ -28,7 +32,20 @@ module.exports = {
             // want to bundle your CSS files? i got u fam
             {
                 test: /\.css/,
-                loader: ['style-loader', 'css-loader']
+                use: extractPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader']
+                })
+            },
+            {
+                test: /\.(png|jpg)$/,
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        name: "img/[name].[ext]",
+                        limit: 1000
+                    }
+                }]
             }
         ]
     },
@@ -41,11 +58,9 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             title: 'Custom Template',
-            template: './src/index.html',
+            template: 'index.html',
             hash: true
         }),
-        new ExtractTextPlugin({
-            filename: './bundle.styles.css'
-        })
+        extractPlugin
     ]
 };
