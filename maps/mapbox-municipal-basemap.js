@@ -15,7 +15,7 @@ const stylesheet = {
     "counties": {
       "type": "vector",
       // To be replaced with our DO tile server...someday...
-      "url": "https://dvrpc-freight.michaelruane.com/dvrpc_boundaries.json"
+      "url": "https://tiles.dvrpc.org/dvrpc_boundaries.json"
     }
   },
   "layers": [
