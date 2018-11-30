@@ -6,7 +6,6 @@
         <div id="map"></div>
 */
 
-// To be replaced with our DO access token...someday...
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
 const stylesheet = {
@@ -14,7 +13,6 @@ const stylesheet = {
   "sources": {
     "counties": {
       "type": "vector",
-      // To be replaced with our DO tile server...someday...
       "url": "https://tiles.dvrpc.org/dvrpc_boundaries.json"
     }
   },

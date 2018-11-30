@@ -1,0 +1,21 @@
+/* set default scroll behavior to smooth for all scroll elements */
+html{
+    scroll-behavior: smooth;
+}
+
+/* adjust height, width, color and border-width as is appropriate for the page */
+#down-arrow{
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 3%;
+    height: 4vw;
+    width: 4vw;
+    border: solid #121212;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+}
+#down-arrow:hover{
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+}
