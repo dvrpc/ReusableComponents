@@ -1,0 +1,49 @@
+/* edit the shadow to your preference */
+#modal-toggle, #modal-content{
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+#modal-toggle:hover, #close-modal:hover{
+    cursor: pointer;
+}
+#modal-toggle{
+    /* toggle positioning depending on where your modal-toggle is */
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    padding: 12px 10px;
+    width: 100px;
+    background: #f7f7f7;
+    font-size: 1.2em;
+    color: #0074ad;
+    text-align: center;
+    border-radius: 4px;
+}
+/* take up the whole screen and grey out whatever isn't in #modal-content */
+#modal{
+    position: fixed;
+    display: none;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.3);
+}
+#modal-content{
+    position: relative;
+    margin: 0 auto;
+    background: #f7f7f7;
+    width: 50%;
+    margin-top: 15%;
+    padding: 3%;
+    border-radius: 4px;
+}
+#close-modal{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-size: 1.5em;
+}
