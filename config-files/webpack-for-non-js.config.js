@@ -1,6 +1,7 @@
 /* 
-    Steps to create production bundles for apps with older architecture
-        See webpack.config.js for projects built in React, ES6 modules or other
+    Steps to create production bundles for apps with older* architecture
+        See webpack.config.js for projects built in React, ES6 modules or similar
+        * This does still assume modular js w/a single entry point (i.e. index.js). Single file behemoths also work.
     
     The output from these steps are:
         A minified, polyfilled production bundle for your javascript
@@ -38,7 +39,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
-    // only use inject: 'body' if you want to copy over all of the assets into the created template (i.e. js files, css files, etc)
+    // only use inject: 'body' if you want to copy over all of the assets into the created template (i.e. <script>, <link>, etc)
     inject: 'body',
     minify: {
         collapseWhitespace: true,
