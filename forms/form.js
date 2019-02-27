@@ -35,7 +35,7 @@ formatInputs = e => {
         let safeValue = value.trim().replace(/\W/g, '')
         
             // In the case where one of the fields is a file upload, skip over it b/c the value will be an object
-            let safeValueHandleFileUpload = key !== 'input-type=file-name' ? value.trim().replace(/\W/g, '') : value
+            // let safeValueHandleFileUpload = key !== 'input-type=file-name' ? value.trim().replace(/\W/g, '') : value
                 
         // Easiest way to extract the data is if the output can have the same key/value pairs as the form
         // see line 48 onward to handle cases where output cannot have the same key/value pairs as the form
