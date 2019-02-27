@@ -1,0 +1,31 @@
+<!-- 
+    set the appropriate form method
+    set the appropriate enctype (generally, text/plain is fine but multipart/form-data is useful for img uploads and forms with larger payloads)
+    make sure to set the 'name' field for all input/select/other elements in order for FormData() to access them
+    make sure to set the 'required', 'readonly' and/or 'default' fields, if necessary
+ -->
+<form id="form-name" method="" enctype="">
+    <!-- Standard inputs (type = text, date, tel, email, etc are all handled the same way) -->
+    <fieldset form="form-name">
+        <label for="input-name">Input Name: </label>
+        <input type="text" name="input-name">
+    </fieldset>
+
+    <!-- Select (effectively the same as above in terms of how FormData() will interpret it) -->
+    <fieldset form="form-name">
+        <label for="other-input-name">Other Input Name: </label>
+        <select name="other-input-name">
+            <option default value="Value">Value</option>
+            <option value="Value2">Value2</option>
+        </select>
+    </fieldset>
+
+    <!-- File uploads -->
+    <fieldset form="form-name">
+        <label for="file">Other Input Name: </label>
+        <!-- change the accept field to the appropriate file types for the project -->
+        <input type="file" accept="img/png, image/jpeg" name="file">
+    </fieldset>
+
+    <button type="submit">Submit</button>
+</form>
