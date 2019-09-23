@@ -1,0 +1,31 @@
+#section-name{
+    /* set the background color for the section, which will function as the active tab background as well */
+    background: #63792a;
+}
+
+.tab-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.tab{
+    /* This can be any color. Right now it's a semi-transparent overlay that translates to a darker version of the container's background*/
+    background: rgba(0,0,0.3);
+
+    /* adjust color and thickness */
+    border-right: 2px solid #fff;
+
+    /* adjust width to however many tabs there are to ensure even spacing of elements */
+    width: 33%;
+    font-weight: 500;
+}
+.tab:last-child{
+    /* don't add a border to the last tab */
+    border-right: none;
+}
+.tab.active{
+    /* by removing the background, the tab looks active */
+    background: none;
+    font-weight: 700;
+}

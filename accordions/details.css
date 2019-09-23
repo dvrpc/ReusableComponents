@@ -1,0 +1,12 @@
+details[open] summary{
+    /* Change summary color and font weight to indicate status of accordion to user */
+    color: #643b83;
+    font-weight: 700;
+}
+/* Override global style to show the default, collapsible arrows*/
+summary{
+    display: revert;
+}
+summary:hover{
+    cursor: pointer;
+}

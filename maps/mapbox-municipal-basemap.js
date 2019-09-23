@@ -11,16 +11,16 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5e
 const stylesheet = {
   "version": 8, // to be updated, probably
   "sources": {
-    "counties": {
+    "boundaries": {
       "type": "vector",
-      "url": "https://tiles.dvrpc.org/dvrpc_boundaries.json"
+      "url": "https://tiles.dvrpc.org/data/dvrpc-municipal.json"
     }
   },
   "layers": [
     {
       "id": "county-fill",
       "type": "fill",
-      "source": "counties",
+      "source": "boundaries",
       "source-layer": "county",
       "layout": {},
       "paint": {
@@ -29,14 +29,14 @@ const stylesheet = {
       },
       "filter": [
           "==",
-          "DVRPC_REG",
+          "dvrpc",
           "Yes"
         ],
     },  
     {
         "id": "municipality-outline",
         "type": "line",
-        "source": "counties",
+        "source": "boundaries",
         "source-layer": "municipalities",
         "paint": {
             'line-width': 0.5, // or whatever width you want
@@ -46,7 +46,7 @@ const stylesheet = {
     {
         "id": "county-outline",
         "type": "line",
-        "source": "counties",
+        "source": "boundaries",
         "source-layer": "county",
         "paint": {
             'line-width': 2.5, // or whatever width you want
@@ -54,7 +54,7 @@ const stylesheet = {
         },
         "filter": [
           "==",
-          "DVRPC_REG",
+          "dvrpc",
           "Yes"
         ]
     }
