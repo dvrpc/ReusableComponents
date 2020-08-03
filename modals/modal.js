@@ -13,7 +13,9 @@ var ariaHideModal = function() {
 
 // reveal and remove aria-hidden attribute
 var ariaShowModal = function() {
-  modal.style.display = 'block'
+  modal.style.display = 'flex'
+  modal.style.justifyContent = 'center'
+  modal.style.alignItems = 'center'
   modal.setAttribute('aria-hidden', 'false')
 }
 
@@ -32,7 +34,7 @@ window.onclick = function(event) {
 }
 document.onkeydown = function(event) {
   // make sure the modal is open first
-  if(modal.style.display === 'block'){
+  if(modal.style.display === 'flex'){
     // keyCode for the escape key
     if(event.keyCode === 27){
       ariaHideModal()
