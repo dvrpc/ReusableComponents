@@ -1,11 +1,13 @@
 /* General */
 footer{
+    height: 350px;
+    width: 100%;
     padding: 4% 15.5%;
     background: #636363;
     color: #f7f7f7;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
     font-size: 0.9rem;
 }
 address{
@@ -55,13 +57,17 @@ footer{
     height: 300px;
 }
 #footer-logo{
+    display: block;
     width: 65px;
+    margin: 0 auto;
+}
+#footer-words, #footer-contact-wrapper{
+    width: 72%;
 }
 #footer-words{
     margin-bottom: 6%;
 }
 #footer-contact-wrapper{
-    width: 60%;
     text-align: center;
 }
 .vr, .footer-social{
