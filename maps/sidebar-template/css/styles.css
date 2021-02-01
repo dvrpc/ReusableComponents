@@ -1,0 +1,75 @@
+/* General */
+    body {
+        margin: 0;
+        font-size: 14px;
+        font-family: 'Robot', sans-serif;
+        line-height: 140%;
+        text-rendering: optimizeLegibility;
+    }
+    :root {
+        --theme-dvrpc: #0078ae;
+    }
+    .flex-row {
+        display: flex;
+        align-items: center;
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-row-between {
+        justify-content: space-between;
+    }
+    .flex-row-around {
+        justify-content: space-around;
+    }
+    .flex-row-end {
+        justify-content: flex-end;
+    }
+/* END General */
+
+
+
+/* Navbar */
+nav {
+    height: 6vh;
+    padding: 0 10px;
+    background-color: var(--theme-dvrpc);
+    color: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    color: #f7f7f7;
+}
+/* END Navbar */
+
+
+
+/* Main Webmap Area */
+#main-content-wrapper {
+    height: 94vh;
+}
+/* END Main Webmap Area */
+
+
+
+/* Sidebar */
+#sidebar {
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f7f7f7;
+}
+/* END Sidebar */
+
+
+
+/* Map */
+#map {
+    width: 70%;
+    height: 100%;
+}
+/* END Map */
