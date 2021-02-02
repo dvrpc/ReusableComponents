@@ -99,6 +99,13 @@ nav {
     text-decoration: underline;
     padding: 0;
 }
+.nav-vr {
+    margin: 0 5px;
+}
+#dvrpc-logo {
+    display: block;
+    width: 75px;
+}
 /* END Navbar */
 
 
