@@ -1,9 +1,9 @@
-import { makeMap, regionalExtentControl } from './map.js'
+import { makeMap, makeRegionalExtentControl } from './map.js'
 import sources from './mapSources.js'
 import layers from './mapLayers.js'
 
 const map = makeMap()
-const control = regionalExtentControl(map)
+const control = makeRegionalExtentControl(map)
 
 map.addControl(control);
 
