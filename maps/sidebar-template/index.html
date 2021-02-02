@@ -5,14 +5,20 @@
         <title>Webmap Template</title>
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-        <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&amp;display=swap">
-        <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet">
-        <script defer type="text/javascript" src="./js/index.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <script defer type="module" src="./js/index.js"></script>
     </head>
+
     <body>
-        <nav>
-            <a href="/" class="nav-links"><img src="./logo.png" alt="DVRPC logo" /></a>
+        <nav class="flex-row flex-row-between">
+            <div>
+                <a href="/" class="nav-links"><img src="./img/logo.png" alt="DVRPC logo" /></a>
+                |
+                <img src="./imgs/project-logo.png" alt="project logo">
+            </div>
+            
             <div>
                 <a href="/" class="nav-links">other</a>
                 <a href="/" class="nav-links">links</a>
@@ -21,10 +27,15 @@
 
         <main id="main-content-wrapper" class="flex-row flex-row-between">
             <article id="sidebar">
-                <h1>Sidebar</h1>
+                <div id="sidebar-content">
+                    <h1>Content Header</h1>
+                    <p>content goes here</p>
+                    <p>DIY styles</p>
+                </div>
 
-                <p>content goes here</p>
-                <p>nothing is styled, DIY</p>
+                <footer>
+                    footer
+                </footer>
             </article>
 
             <div id="map"></div>

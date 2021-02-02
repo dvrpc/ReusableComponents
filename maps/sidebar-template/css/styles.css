@@ -1,44 +1,55 @@
 /* General */
-    body {
-        margin: 0;
-        font-size: 14px;
-        font-family: 'Robot', sans-serif;
-        line-height: 140%;
-        text-rendering: optimizeLegibility;
-    }
-    :root {
-        --theme-dvrpc: #0078ae;
-    }
-    .flex-row {
-        display: flex;
-        align-items: center;
-    }
-    .flex-column {
-        display: flex;
-        flex-direction: column;
-    }
-    .flex-row-between {
-        justify-content: space-between;
-    }
-    .flex-row-around {
-        justify-content: space-around;
-    }
-    .flex-row-end {
-        justify-content: flex-end;
-    }
+* {
+    margin: 0;
+}
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 140%;
+    text-rendering: optimizeLegibility;
+}
+h1 {
+    text-align: center;
+}
+:root {
+    --theme-dvrpc: #0078ae;
+    --theme-dark: #505a5e;
+
+    --wrapper-padding: 10px;
+    --wrapper-padding-double: 20px;
+
+    --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-row-between {
+    justify-content: space-between;
+}
+.flex-row-around {
+    justify-content: space-around;
+}
+.flex-row-end {
+    justify-content: flex-end;
+}
 /* END General */
 
 
 
 /* Navbar */
 nav {
+    position: relative;
     height: 6vh;
-    padding: 0 10px;
+    padding: 0 var(--wrapper-padding);
     background-color: var(--theme-dvrpc);
     color: #f7f7f7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
 }
 .nav-links {
     color: #f7f7f7;
@@ -63,6 +74,10 @@ nav {
     overflow-x: hidden;
     background-color: #f7f7f7;
 }
+#sidebar-content {
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    min-height: calc(90% - 40px);
+}
 /* END Sidebar */
 
 
@@ -73,3 +88,15 @@ nav {
     height: 100%;
 }
 /* END Map */
+
+
+
+/* Footer */
+footer {
+    padding: var(--wrapper-padding);
+    width: 100%;
+    min-height: calc(10% - 20px);
+    background-color: var(--theme-dark);
+    color: #f7f7f7;
+}
+/* END Footer */
