@@ -43,4 +43,13 @@ const makeRegionalExtentControl = map => {
     return navigationControl
 }
 
-export { makeMap, makeRegionalExtentControl }
+const addMap = () => {
+    const map = makeMap()
+    const control = makeRegionalExtentControl(map)
+
+    map.addControl(control);
+
+    return map
+}
+
+export default addMap

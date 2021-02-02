@@ -18,6 +18,7 @@ h1 {
     --wrapper-padding: 10px;
     --wrapper-padding-double: 20px;
 
+    --border-radius: 4px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 .flex-row {
@@ -41,6 +42,44 @@ h1 {
 
 
 
+/* Modal */
+#modal-content{
+    box-shadow: var(--box-shadow);
+}
+#modal-toggle, #close-modal{
+    cursor: pointer;
+}
+#modal{
+    position: fixed;
+    display: none;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.3);
+}
+#modal-content{
+    position: relative;
+    background: #fff;
+    width: 50%;
+    padding: var(--wrapper-padding-double);
+    border-radius: var(--border-radius);
+}
+#close-modal{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 1.5em;
+}
+.modal-content-subheader {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/* END Modal */
+
+
+
 /* Navbar */
 nav {
     position: relative;
@@ -54,6 +93,12 @@ nav {
 .nav-links {
     color: #f7f7f7;
 }
+.nav-btn {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+}
 /* END Navbar */
 
 
@@ -63,9 +108,10 @@ nav {
     height: 94vh;
 }
 #regional-extent-img {
+    display: block;
+    margin: 0 auto;
     height: 20px;
     width: 20px;
-    margin-top: 2.5px;
 }
 /* END Main Webmap Area */
 

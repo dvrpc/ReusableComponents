@@ -14,11 +14,13 @@
     <body>
         <nav class="flex-row flex-row-between">
             <div>
-                <a href="/" class="nav-links"><img src="./img/logo.png" alt="DVRPC logo" /></a>
+                <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" /></a>
                 |
                 <img src="./imgs/project-logo.png" alt="project logo">
+                |
+                <button id="modal-toggle" class="nav-btn nav-links">about</button>
             </div>
-            
+
             <div>
                 <a href="/" class="nav-links">other</a>
                 <a href="/" class="nav-links">links</a>
@@ -40,6 +42,15 @@
 
             <div id="map"></div>
         </main>
+
+        <div id="modal" role="dialog">
+            <div id="modal-content">
+                <span id="close-modal">&times;</span>
+        
+                <h2 class="modal-content-subheader">Modal content goes here</h2>
+                <p>About the project, methodology, disclaimer, contact info, etc.</p>
+            </div>
+        </div>
 
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
     </body>
