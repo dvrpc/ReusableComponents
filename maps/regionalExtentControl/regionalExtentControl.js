@@ -3,7 +3,7 @@ const makeRegionalExtentControl = map => {
   // coordinates and zoom level for regional extent
   const dvrpcExtent = {
       center: [-75.142241, 40.0518322],
-      zoom: 8.5
+      zoom: 8.25
   }
 
   const navigationControl = new mapboxgl.NavigationControl();
