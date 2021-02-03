@@ -133,7 +133,7 @@ nav {
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
     width: 35vw;
-    height: 92vh;
+    height: 91.5vh;
     z-index: 3;
     overflow-y: auto;
     overflow-x: hidden;
