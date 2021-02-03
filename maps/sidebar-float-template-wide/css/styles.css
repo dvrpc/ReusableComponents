@@ -30,13 +30,13 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
-.flex-row-between {
+.flex-between {
     justify-content: space-between;
 }
-.flex-row-around {
+.flex-around {
     justify-content: space-around;
 }
-.flex-row-end {
+.flex-end {
     justify-content: flex-end;
 }
 /* END General */
@@ -129,14 +129,21 @@ nav {
 
 /* Sidebar */
 #sidebar {
-    width: 30%;
-    height: 100%;
+    position: absolute;
+    top: calc(6vh + 10px);
+    left: var(--wrapper-padding);
+    width: 35vw;
+    height: calc(88vh - 20px);
+    z-index: 3;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #f7f7f7;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    min-height: calc(90% - 40px);
 }
 /* END Sidebar */
 
@@ -144,7 +151,7 @@ nav {
 
 /* Map */
 #map {
-    width: 70%;
+    width: 100%;
     height: 100%;
 }
 /* END Map */
