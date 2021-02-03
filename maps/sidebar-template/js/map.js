@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
-const makeMap = () => {
+const initMap = () => {
     return new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
@@ -43,8 +43,8 @@ const makeRegionalExtentControl = map => {
     return navigationControl
 }
 
-const addMap = () => {
-    const map = makeMap()
+const makeMap = () => {
+    const map = initMap()
     const control = makeRegionalExtentControl(map)
 
     map.addControl(control);
@@ -52,4 +52,4 @@ const addMap = () => {
     return map
 }
 
-export default addMap
+export default makeMap

@@ -48,6 +48,7 @@ h1 {
 }
 #modal-toggle, #close-modal{
     cursor: pointer;
+    font-size: inherit;
 }
 #modal{
     position: fixed;
@@ -65,6 +66,7 @@ h1 {
     width: 50%;
     padding: var(--wrapper-padding-double);
     border-radius: var(--border-radius);
+    filter: brightness(150%);
 }
 #close-modal{
     position: absolute;
