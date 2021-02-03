@@ -1,4 +1,4 @@
-# Floating, responsive webmap template
+# Floating, responsive webmap template with full width footer
 
 
 ## Includes
