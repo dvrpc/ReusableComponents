@@ -28,7 +28,6 @@ h1 {
 .flex-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .flex-row-between {
     justify-content: space-between;
@@ -115,7 +114,7 @@ nav {
 
 /* Main Webmap Area */
 #main-content-wrapper {
-    height: 94vh;
+    height: 88vh;
 }
 #regional-extent-img {
     display: block;
@@ -137,7 +136,6 @@ nav {
 }
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
-    min-height: calc(90% - 40px);
 }
 /* END Sidebar */
 
@@ -154,9 +152,10 @@ nav {
 
 /* Footer */
 footer {
-    padding: var(--wrapper-padding);
-    width: 100%;
-    min-height: calc(10% - 20px);
+    position: relative;
+    box-shadow: var(--box-shadow);
+    padding: 0 var(--wrapper-padding);
+    height: 6vh;
     background-color: var(--theme-dark);
     color: #f7f7f7;
 }
