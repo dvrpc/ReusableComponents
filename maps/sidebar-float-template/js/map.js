@@ -15,7 +15,7 @@ const initMap = () => {
 const makeRegionalExtentControl = map => {
     const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.4
-    // coordinates and zoom level for regional extent
+
     const dvrpcExtent = {
         center: [longitudeOffset, 40.0518322],
         zoom: zoom

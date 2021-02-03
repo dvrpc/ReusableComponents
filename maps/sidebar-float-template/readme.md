@@ -1,4 +1,4 @@
-# Standard, responsive webmap template
+# Floating, responsive webmap template
 
 
 ## Includes
