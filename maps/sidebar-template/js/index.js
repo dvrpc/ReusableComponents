@@ -15,8 +15,9 @@ map.on('load', () => {
     for(const layer in layers) map.addLayer(layers[layer])
 })
 
+
 // modal
-modalToggle.onclick = () => modal.style.display === 'none' ? ariaShowModal(modal) : ariaHideModal(modal)
+modalToggle.onclick = () => ariaShowModal(modal)
 closeModal.onclick = () => ariaHideModal(modal)
 
 modal.onclick = event => {

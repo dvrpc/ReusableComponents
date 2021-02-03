@@ -22,7 +22,7 @@ const ariaShowModal = modal => {
 }
 
 // open the modal by clicking the div
-modalToggle.onclick = () => modal.style.display === 'none' ? ariaShowModal() : ariaHideModal()
+modalToggle.onclick = () => ariaShowModal()
 closeModal.onclick = () => ariaHideModal()
 
 modal.onclick = event => {
