@@ -30,13 +30,13 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
-.flex-row-between {
+.flex-between {
     justify-content: space-between;
 }
-.flex-row-around {
+.flex-around {
     justify-content: space-around;
 }
-.flex-row-end {
+.flex-end {
     justify-content: flex-end;
 }
 /* END General */
