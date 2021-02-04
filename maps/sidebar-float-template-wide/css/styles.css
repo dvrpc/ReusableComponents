@@ -20,6 +20,7 @@ h1 {
 
     --border-radius: 4px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    --box-shadow-up: 1px -2px 3px rgba(0,0,0,0.3);
 }
 .flex-row {
     display: flex;
@@ -161,7 +162,7 @@ nav {
 /* Footer */
 footer {
     position: relative;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-up);
     padding: 0 var(--wrapper-padding);
     height: 6vh;
     background-color: var(--theme-dark);
