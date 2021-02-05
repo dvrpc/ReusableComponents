@@ -10,38 +10,53 @@ This will cover all the common elements that you will use when adding content to
         ```<p>write text here</p>```
 - The ```<em>``` and ```<strong>``` tags add _emphasis_ and __weight__ to pieces of text. Wrap them around words or phrases within a ```<p>``` tag
     - attributes: none
-    - classes: TBD
+    - classes: none
     - sample: <br />
         ```<p>this is <em>italic</em> and this is <strong>bold</bold></p>```
 - Headers (```<h1>```,```<h2>```,```<h3>```....```<h6>```) are self explanatory. The only thing to know is a header hierarchy _must_ be established and respected. The default sidebar header is an ```<h1>``` - do not add others. Header hierarchy is established by order and nesting. <br />
-For example, this is acceptable:
-```
-    <h2>subheader</h2>
-    <div>
-        <h3>sub-subheader</h3>
-        <p>content</p>
-    </div>
+    - For example, this is acceptable:
+        ```
+            <h2>subheader</h2>
+            <div>
+                <h3>sub-subheader</h3>
+                <p>content</p>
+            </div>
 
-    <h2>other subheader</h2>
-    <div>
-        <h3>other sub-subheader</h3>
-        <p>content</p>
-    </div>
-```
-while this is not:
-```
-    <h3>subheader</h3>
-    <div>
-        <h2>sub-subheader</h2>
-        <p>content</p>
-    </div>
+            <h2>other subheader</h2>
+            <div>
+                <h3>other sub-subheader</h3>
+                <p>content</p>
+            </div>
+        ```
+    - while this is not:
+        ```
+            <h3>subheader</h3>
+            <div>
+                <h2>sub-subheader</h2>
+                <p>content</p>
+            </div>
 
-    <h3>other subheader</h3>
-    <div>
-        <h2>other sub-subheader</h2>
-        <p>content</p>
-    </div>
-```
+            <h3>other subheader</h3>
+            <div>
+                <h2>other sub-subheader</h2>
+                <p>content</p>
+            </div>
+        ```
+- Accordions ```<details><summary>accordion title</summary></details>``` are collabsible content sections. Use these for content that doesn't need to be viewed by default. The title of the accordion is the text that you put within the ```<summary>``` element.
+    - attributes: none
+    - classes: 
+        - ```<details>```: "sidebar-details"
+        - ```<summary>```: "sidebar-summary"
+        - ```<div>```: "sidebar-details-content"
+    - sample: <br />
+        ```
+            <details class="sidebar-details">
+                <summary class="sidebar-summary">Read More</summary>
+                <div class="sidebar-details-content">
+                    <p>put collapsible content in here</p>
+                </div>
+            </details>
+        ```
 
 ## Images
 - The ```<img>``` tag is a container for static media (images)
@@ -49,9 +64,9 @@ while this is not:
         - ```src```: the path to the image. Can be a URL or a relative path. **required**
         - ```alt```: descriptive text for users that can't view images. **required**
     - classes:
-        - "sidebar-img" this applies the standard styles to images. Can be edited in ```styles.css```
+        - "sidebar-img"
     - sample: <br />
-        ```<img src="www.image.come/myimage.jpeg" class="sidebar-img" alt="image description">``` <br />
+        ```<img src="www.image.come/myimage.jpeg" class="sidebar-img" alt="image description">```<br />
         ```<img src="./path/to/file.png" class="sidebar-img" alt="image description">```
 
 ## Lists
@@ -64,7 +79,7 @@ while this is not:
             <li>list item</li>
         </ol>
     ```
-- Unordered lists: use unordered lists ```<ul>``` to display content where orer doesn't matter and there isn't any set hierarchy. 
+- Unordered lists: use unordered lists ```<ul>``` to display content where order doesn't matter and there isn't any set hierarchy. 
     - attributes: none
     - classes: "sidebar-list", "sidebar-ul"
     - sample: <br />
