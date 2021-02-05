@@ -13,7 +13,7 @@ This will cover all the common elements that you will use when adding content to
     - classes: none
     - sample: <br />
         ```<p>this is <em>italic</em> and this is <strong>bold</bold></p>```
-- Headers (```<h1>```,```<h2>```,```<h3>```....```<h6>```) are self explanatory. The only thing to know is a header hierarchy _must_ be established and respected. The default sidebar header is an ```<h1>``` - do not add others. Header hierarchy is established by order and nesting. <br />
+- Headers (```<h1>```,```<h2>```,```<h3>```....```<h6>```) are self explanatory. The only thing to know is a header hierarchy _must_ be established and respected. The default sidebar header is an ```<h1>``` - do not add more. Header hierarchy is established by order and nesting. <br />
     - For example, this is acceptable:
         ```
             <h2>subheader</h2>
@@ -90,3 +90,5 @@ This will cover all the common elements that you will use when adding content to
     ```
 
 ## Forms
+- Use ```<form>``` elements to allows users to toggle map layers and other features
+- @TODO create and add forms & form fncs to templates
