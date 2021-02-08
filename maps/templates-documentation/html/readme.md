@@ -6,56 +6,67 @@ This will cover all the common elements that you will use when adding content to
 -   The ```<p>``` tag is a general purpose text container. Put one paragraph of text per ```<p>``` tag. 
     - attributes: none
     - classes: none
-    - Sample: <br />
-        ```<p>write text here</p>```
+    - Sample:
+        ```
+        <p>
+            insert paragraph here
+        </p>
+        ```
 - The ```<em>``` and ```<strong>``` tags add _emphasis_ and __weight__ to pieces of text. Wrap them around words or phrases within a ```<p>``` tag
     - attributes: none
     - classes: none
     - sample: <br />
-        ```<p>this is <em>italic</em> and this is <strong>bold</bold></p>```
-- Headers (```<h1>```,```<h2>```,```<h3>```....```<h6>```) are self explanatory. The only thing to know is a header hierarchy _must_ be established and respected. The default sidebar header is an ```<h1>``` - do not add more. Header hierarchy is established by order and nesting. <br />
+        ```
+        <p>
+            this is <em>italic</em> and this is <strong>bold</bold>
+        </p>
+        ```
+- Headers (```<h1>```,```<h2>```, .... ```<h6>```) establish hierarchy and have to be in order. For example the sidebar header is an ```<h1>``` so subsequent sidebar subheaders should start at ```<h2>``` and work down as appropriate.<br />
+Header hierarchy is established by order and nesting. <br />
     - For example, this is acceptable:
         ```
-            <h2>subheader</h2>
-            <div>
-                <h3>sub-subheader</h3>
-                <p>content</p>
-            </div>
+        <h2>subheader</h2>
+        <div>
+            <h3>sub-subheader</h3>
+            <p>content</p>
+        </div>
 
-            <h2>other subheader</h2>
-            <div>
-                <h3>other sub-subheader</h3>
-                <p>content</p>
-            </div>
+        <h2>other subheader</h2>
+        <div>
+            <h3>other sub-subheader</h3>
+            <p>content</p>
+        </div>
         ```
     - while this is not:
         ```
-            <h3>subheader</h3>
-            <div>
-                <h2>sub-subheader</h2>
-                <p>content</p>
-            </div>
+        <h3>subheader</h3>
+        <div>
+            <h2>sub-subheader</h2>
+            <p>content</p>
+        </div>
 
-            <h3>other subheader</h3>
-            <div>
-                <h2>other sub-subheader</h2>
-                <p>content</p>
-            </div>
+        <h3>other subheader</h3>
+        <div>
+            <h2>other sub-subheader</h2>
+            <p>content</p>
+        </div>
         ```
-- Accordions ```<details><summary>accordion title</summary></details>``` are collabsible content sections. Use these for content that doesn't need to be viewed by default. The title of the accordion is the text that you put within the ```<summary>``` element.
-    - attributes: none
+- Accordions ```<details></details>``` are collabsible content sections. Use these for content that doesn't need to be viewed by default. Use the ```<summary>``` tag to give a title to the accordion.
+    - attributes: 
+        - ```<details>```: open 
     - classes: 
         - ```<details>```: "sidebar-details"
         - ```<summary>```: "sidebar-summary"
         - ```<div>```: "sidebar-details-content"
     - sample: <br />
         ```
-            <details class="sidebar-details">
-                <summary class="sidebar-summary">Read More</summary>
-                <div class="sidebar-details-content">
-                    <p>put collapsible content in here</p>
-                </div>
-            </details>
+        <details class="sidebar-details">
+            <summary class="sidebar-summary">Read More</summary>
+            
+            <div class="sidebar-details-content">
+                <p>put collapsible content in here</p>
+            </div>
+        </details>
         ```
 
 ## Images
@@ -90,5 +101,5 @@ This will cover all the common elements that you will use when adding content to
     ```
 
 ## Forms
-- Use ```<form>``` elements to allows users to toggle map layers and other features
+- Use ```<form>``` tag to give a title to the accordions to allows users to toggle map layers and other features
 - @TODO create and add forms & form fncs to templates
