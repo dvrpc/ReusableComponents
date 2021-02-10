@@ -85,21 +85,43 @@ Header hierarchy is established by order and nesting. <br />
     - attributes: none
     - classes: "sidebar-list"
     - sample: <br />
-    ```
-        <ol class="sidebar-list">
-            <li>list item</li>
-        </ol>
-    ```
+        ```
+            <ol class="sidebar-list">
+                <li>list item</li>
+            </ol>
+        ```
 - Unordered lists: use unordered lists ```<ul>``` to display content where order doesn't matter and there isn't any set hierarchy. 
     - attributes: none
     - classes: "sidebar-list", "sidebar-ul"
     - sample: <br />
-    ```
-        <ul class="sidebar-list sidebar-ul">
-            <li>list item</li>
-        </ul>
-    ```
+        ```
+            <ul class="sidebar-list sidebar-ul">
+                <li>list item</li>
+            </ul>
+        ```
 
 ## Forms
 - Use ```<form>``` tag to give a title to the accordions to allows users to toggle map layers and other features
-- @TODO create and add forms & form fncs to templates
+- @TODO create and add forms & form fncs to templates. One form type will turn layers on/off, another form type will toggle filters within layers.
+    - something like ```<form class="sidebar-form sidebar-form-toggle">``` and ```<form class="sidebar-form sidebar-form-filter">```
+    - attributes: 
+        - form control, form type, etc
+        - data-layer: layer name to toggle on form change **required**
+        - id: unique id for the form **required**
+    - classes:
+        - "sidebar-form"
+        - layer toggle forms: "sidebar-form-toggle"
+        - layer filter forms: "sidebar-form-filter"
+    - samples: <br />
+        - Layer Toggle form
+            ```
+            <form class="sidebar-form sidebar-form-toggle" id="toggle-layers-1">
+
+            </form>
+            ```
+        - Layer Filter form
+            ```
+            <form class="sidebar-form sidebar-form-filter" id="filter-layers-1">
+
+            </form>
+            ```
