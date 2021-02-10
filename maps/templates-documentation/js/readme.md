@@ -9,13 +9,13 @@ View full Layer details and properties here: [Mapbox layers documentation](https
         ```
         layerName: {
             id: '', // unique id
-            'type': 'line',
+            type: 'line',
             source: '', // name of source defined by you in source.js
             'source-layer': '', // layer data name from source.js object
-            'paint': {
+            paint: {
                 'line-width': '', // number from 0.00 - 24
                 'line-color': '', // any valid hex or rgb code
-                // add additional paint properties here
+                // add additional paint properties here. See advanced section for data driven styling
             }
         }
         ```
@@ -23,10 +23,10 @@ View full Layer details and properties here: [Mapbox layers documentation](https
         ```
         layerName: {
             id: 'municipality-outline',
-            'type': 'line',
+            type: 'line',
             source: 'boundaries',
             'source-layer': 'municipalities',
-            'paint': {
+            paint: {
                 'line-width': '0.5',
                 'line-color': '#4a5c64'
             }
@@ -126,16 +126,26 @@ View full expression syntax here: [Mapbox expressions documentation](https://doc
             }
             ```
     - Adjust property according to zoom level:
-        ```
-        'paint': {
-            'line-width': [
-                'interpolate', ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
-                11, 5.5
-            ]
-        }
-        ```
+        - Template: 
+            ```
+            paint: {
+                'line-width': [
+                    'interpolate', ['linear'], ['zoom'], // see documentation for other interpolation types
+                    1, 1, // format is zoom level, line width
+                ]
+            }
+            ```
+        - Sample: 
+            ```
+            paint: {
+                'line-width': [
+                    'interpolate', ['linear'], ['zoom'],
+                    1, 1,
+                    7, 3,
+                    11, 5.5
+                ]
+            }
+            ```
 
 - Filters
     - Filter by equality (one property):
@@ -158,7 +168,7 @@ View full expression syntax here: [Mapbox expressions documentation](https://doc
     - Filter by equality (multiple properties):
         - Template:
             ```
-            filter: ['', // match type (see documentation for details)
+            filter: ['', // match type (see expressions documentation for details)
                 ['', ['get', ''], ] // comparison type, property name & property value
             ]
             ```
@@ -171,4 +181,7 @@ View full expression syntax here: [Mapbox expressions documentation](https://doc
             ```
 
 ## Mapbox Examples
-link to choic examples from mapbox documentation
+- [All examples](https://docs.mapbox.com/mapbox-gl-js/example/)
+- [Hover effect with feature state](https://docs.mapbox.com/mapbox-gl-js/example/hover-styles/)
+- [Add popup on click](https://docs.mapbox.com/mapbox-gl-js/example/popup-on-click/)
+- [Add popup on hover](https://docs.mapbox.com/mapbox-gl-js/example/popup-on-hover/)
