@@ -146,6 +146,13 @@ nav {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
     min-height: calc(90% - 40px);
 }
+.sidebar-img {
+    display: block;
+    margin: 5px auto;
+    max-width: 100%;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
 /* END Sidebar */
 
 
