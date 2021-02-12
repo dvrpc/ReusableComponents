@@ -31,7 +31,5 @@ modal.onclick = event => {
     if (event.target == modal) ariaHideModal(modal)
 }
 document.onkeydown = event => {
-    if( event.code === 'Escape' && modal.style.display === 'flex'){
-        ariaHideModal(modal)
-    }
+    if( event.code === 'Escape' && modal.style.display === 'flex' ) ariaHideModal(modal)
 }

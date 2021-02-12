@@ -40,12 +40,6 @@ h1 {
 .flex-end {
     justify-content: flex-end;
 }
-.sidebar-img {
-    display: block;
-    max-width: 100%;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-}
 /* END General */
 
 
@@ -144,6 +138,23 @@ nav {
 }
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
+}
+.sidebar-img {
+    display: block;
+    max-width: 100%;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+.sidebar-form {
+    margin: var(--wrapper-padding) auto;
+}
+.sidebar-fieldset {
+    background: white;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--theme-dvrpc);
+}
+.sidebar-fieldset label {
+    margin-right: 5px;
 }
 /* END Sidebar */
 

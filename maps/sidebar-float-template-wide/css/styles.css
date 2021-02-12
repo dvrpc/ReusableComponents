@@ -11,6 +11,9 @@ body {
 h1 {
     text-align: center;
 }
+p {
+    margin-top: 5px;
+}
 :root {
     --theme-dvrpc: #0078ae;
     --theme-dark: #505a5e;
@@ -152,6 +155,17 @@ nav {
     max-width: 100%;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
+}
+.sidebar-form {
+    margin: var(--wrapper-padding) auto;
+}
+.sidebar-fieldset {
+    background: white;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--theme-dvrpc);
+}
+.sidebar-fieldset label {
+    margin-right: 5px;
 }
 /* END Sidebar */
 
