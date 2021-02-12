@@ -86,42 +86,63 @@ Header hierarchy is established by order and nesting. <br />
     - classes: "sidebar-list"
     - sample: <br />
         ```
-            <ol class="sidebar-list">
-                <li>list item</li>
-            </ol>
+        <ol class="sidebar-list">
+            <li>list item</li>
+        </ol>
         ```
 - Unordered lists: use unordered lists ```<ul>``` to display content where order doesn't matter and there isn't any set hierarchy. 
     - attributes: none
     - classes: "sidebar-list", "sidebar-ul"
     - sample: <br />
         ```
-            <ul class="sidebar-list sidebar-ul">
-                <li>list item</li>
-            </ul>
+        <ul class="sidebar-list sidebar-ul">
+            <li>list item</li>
+        </ul>
         ```
 
 ## Forms
-- Use ```<form>``` tag to give a title to the accordions to allows users to toggle map layers and other features
-- @TODO create and add forms & form fncs to templates. One form type will turn layers on/off, another form type will toggle filters within layers.
-    - something like ```<form class="sidebar-form sidebar-form-toggle">``` and ```<form class="sidebar-form sidebar-form-filter">```
+- Use the ```<form>``` tag to allows users to toggle map layers and set filters
     - attributes: 
-        - form control, form type, etc
-        - data-layer: layer name to toggle on form change **required**
-        - id: unique id for the form **required**
+        - value: layer name to toggle on form change **required**
+        - id: unique id for the form (can be the same as value) **required**
     - classes:
         - "sidebar-form"
         - layer toggle forms: "sidebar-form-toggle"
         - layer filter forms: "sidebar-form-filter"
-    - samples: <br />
-        - Layer Toggle form
+    - Layer Toggle form
+        - template:
             ```
-            <form class="sidebar-form sidebar-form-toggle" id="toggle-layers-1">
+            <form class="sidebar-form sidebar-form-toggle">
+                <fieldset class="sidebar-fieldset">
+                    <legend></legend>
 
+                    <label>
+                        <input type="checkbox" id="" name="" value="" checked>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="" name="layer" value="" checked>
+                    </label>
+                </fieldset>
             </form>
             ```
-        - Layer Filter form
+        - sample:
             ```
-            <form class="sidebar-form sidebar-form-filter" id="filter-layers-1">
+            <form class="sidebar-form sidebar-form-toggle">
+                <fieldset class="sidebar-fieldset">
+                    <legend>toggle layers:</legend>
 
+                    <label>
+                        counties
+                        <input type="checkbox" id="county-outline" name="layer" value="county-outline" checked>
+                    </label>
+
+                    <label>
+                        municipalities
+                        <input type="checkbox" id="municipality-outline" name="layer" value="municipality-outline" checked>
+                    </label>
+                </fieldset>
             </form>
             ```
+    - Layer Filter Form:
+        - TBD
