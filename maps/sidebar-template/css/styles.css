@@ -123,6 +123,9 @@ nav {
     height: 20px;
     width: 20px;
 }
+.mapboxgl-popup-content {
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+}
 /* END Main Webmap Area */
 
 
