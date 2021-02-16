@@ -25,8 +25,28 @@ map.on('load', () => {
     // OPTIONAL functionality. Uncomment to use
     // toggleLayerForms.forEach(form => toggleLayers(form, map))
 
-    map.on('mouseenter', 'county-outline', e => makePopupContent(map, e, popup))
-    map.on('mouseleave', 'county-outline', e => map.getCanvas().style.cursor = '')
+    map.on('click', 'county-outline', e => {
+        const allProps = e.features[0].properties
+
+        const target = {
+            lngLat: e.lngLat,
+            props: [
+                // add values here
+                {
+                    prop: allProps.name,
+                    display: 'County'
+                },
+                {
+                    prop: allProps.geoid,
+                    display: 'Geoid'
+                }
+            ]
+        }
+
+        makePopupContent(map, target, popup)
+    })
+    map.on('mouseenter', 'county-outline', () => map.getCanvas().style.cursor = 'pointer')
+    map.on('mouseleave', 'county-outline', () => map.getCanvas().style.cursor = '')
 })
 
 
