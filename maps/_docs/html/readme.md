@@ -1,6 +1,6 @@
 # HTML Markup Documentation for Webmap Templates
 
-This will cover all the common elements that you will use when adding content to the sidebar of a webmap template. If an example element has a class(es) or other attributes, be sure to include those when adding your own. Reach out to web services if you would like documentation on other elements.
+This will cover many common elements that you will use when adding content to the sidebar of a webmap template. If an example element has a class(es) or other attributes, be sure to include those when adding your own. Reach out to web services if you would like documentation on more elements.
 
 ## Text
 -   The ```<p>``` tag is a general purpose text container. Put one paragraph of text per ```<p>``` tag. 
@@ -23,7 +23,7 @@ This will cover all the common elements that you will use when adding content to
         ```
 - Headers (```<h1>```,```<h2>```, .... ```<h6>```) establish hierarchy and have to be in order. For example the sidebar header is an ```<h1>``` so subsequent sidebar subheaders should start at ```<h2>``` and work down as appropriate.<br />
 Header hierarchy is established by order and nesting. <br />
-    - For example, this is acceptable:
+    - For example, this works:
         ```
         <h2>subheader</h2>
         <div>
@@ -37,7 +37,7 @@ Header hierarchy is established by order and nesting. <br />
             <p>content</p>
         </div>
         ```
-    - while this is not:
+    - and this doesn't:
         ```
         <h3>subheader</h3>
         <div>
@@ -51,6 +51,8 @@ Header hierarchy is established by order and nesting. <br />
             <p>content</p>
         </div>
         ```
+
+## Containers
 - Accordions ```<details></details>``` are collabsible content sections. Use these for content that doesn't need to be viewed by default. Use the ```<summary>``` tag to give a title to the accordion.
     - attributes: 
         - ```<details>```: open 
@@ -68,20 +70,27 @@ Header hierarchy is established by order and nesting. <br />
             </div>
         </details>
         ```
+- ```<section></section>``` tags convey semantic meaning and group together blocks of related content. They contain a header and may have other containers, text, media or other tags.
+    - attributes: none
+    - classes: "sidebar-section"
+    - template: 
+        ```
+        <section class="sidebar-section">
+            <!-- header goes here -->
 
-## Images
-- The ```<img>``` tag is a container for static media (images)
-    - attributes: 
-        - ```src```: the path to the image. Can be a URL or a relative path. **required**
-        - ```alt```: descriptive text for users that can't view images. **required**
-    - classes:
-        - "sidebar-img"
-    - sample: <br />
-        ```<img src="www.image.come/myimage.jpeg" class="sidebar-img" alt="image description">```<br />
-        ```<img src="./path/to/file.png" class="sidebar-img" alt="image description">```
-
-## Lists
-- Use ordered lists ```<ol>``` to display content that has a set hierarchy and must be presented in order. I.e. a checklist or step-by-step guide
+            <!-- content goes here -->
+        </section>
+        ```
+    - sample: 
+        ```
+        <section class="sidebar-section">
+            <h2>section header</h2>
+            <p>section section</p>
+            <h3>section subheader</h3>
+            <p>section text</p>
+        </section>
+        ```
+- Lists. Ordered lists ```<ol>``` display content that has a set hierarchy and must be presented in order. I.e. a checklist while unordered lists ```<ul>``` display content without any set hierarchy and order doesn't matter
     - attributes: none
     - classes: "sidebar-list"
     - sample: <br />
@@ -99,6 +108,25 @@ Header hierarchy is established by order and nesting. <br />
             <li>list item</li>
         </ul>
         ```
+- ```<div>``` are general purpose containers. Use them to group elements to achieve specific layouts.
+
+## Images
+- The ```<img>``` tag is a container for static media (images)
+    - attributes: 
+        - ```src```: the path to the image. Can be a URL or a relative path. **required**
+        - ```alt```: descriptive text for users that can't view images. **required**
+    - classes:
+        - "sidebar-img"
+    - sample: <br />
+        ```<img src="www.image.come/myimage.jpeg" class="sidebar-img" alt="image description">```<br />
+        ```<img src="./path/to/file.png" class="sidebar-img" alt="image description">```
+- You can also put an ```<img>``` inside a ```<figure>``` tag if you want a caption included. Like this:
+    ```
+    <figure class="sidebar-figure">
+        <img src="" class="sidebar-img" alt="" />
+        <figcaption>img caption</figcaption>
+    </figure>
+    ```
 
 ## Forms
 - Use the ```<form>``` tag to allows users to toggle map layers and set filters
