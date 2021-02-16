@@ -180,6 +180,54 @@ View full expression syntax here: [Mapbox expressions documentation](https://doc
             ]
             ```
 
+## Map Interactions
+- Popups
+    - Add popups to individual map layers for added interaction. Popup functions and invocation are imported into ```index.js``` by default. Uncomment the import and functions in order to use popups. Configure popup content by adding the name of a data attribute and the text to label it within the "props" array of the "target" object. Popup functionality is handled in popup.js.
+    - Template:
+        ```
+        map.on('click', '', e => { // add layer name between quotes
+            const allProps = e.features[0].properties
+
+            const target = {
+                lngLat: e.lngLat,
+                props: [
+                    // add values here
+                    {
+                        prop: ,
+                        display: ''
+                    },
+                ]
+            }
+
+            makePopupContent(map, target, popup)
+        })
+        map.on('mouseenter', '', () => map.getCanvas().style.cursor = 'pointer') // add layer name
+        map.on('mouseleave', '', () => map.getCanvas().style.cursor = '') // add layer name
+        ```
+    - Sample:
+        ```
+        map.on('click', 'county-outline', e => {
+            const allProps = e.features[0].properties
+
+            const target = {
+                lngLat: e.lngLat,
+                props: [
+                    {
+                        prop: allProps.name,
+                        display: 'County'
+                    },
+                    {
+                        prop: allProps.geoid,
+                        display: 'Geoid'
+                    }
+                ]
+            }
+
+            makePopupContent(map, target, popup)
+        })
+        map.on('mouseenter', 'county-outline', () => map.getCanvas().style.cursor = 'pointer')
+        map.on('mouseleave', 'county-outline', () => map.getCanvas().style.cursor = '')
+        ```
 ## Mapbox Examples
 - [All examples](https://docs.mapbox.com/mapbox-gl-js/example/)
 - [Hover effect with feature state](https://docs.mapbox.com/mapbox-gl-js/example/hover-styles/)
