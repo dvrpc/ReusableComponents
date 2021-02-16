@@ -123,15 +123,6 @@ nav {
     height: 20px;
     width: 20px;
 }
-.mapboxgl-popup-content {
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
-}
-.popup-span {
-    display: block;
-}
-.popup-span:not(:last-of-type) {
-    border-bottom: 1px dotted var(--theme-dark);
-}
 /* END Main Webmap Area */
 
 
@@ -173,6 +164,15 @@ nav {
 #map {
     width: 70%;
     height: 100%;
+}
+.mapboxgl-popup-content {
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+}
+.popup-span {
+    display: block;
+}
+.popup-span:not(:last-of-type) {
+    border-bottom: 1px dotted var(--theme-dark);
 }
 /* END Map */
 
