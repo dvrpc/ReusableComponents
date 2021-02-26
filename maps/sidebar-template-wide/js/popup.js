@@ -9,6 +9,11 @@ const makePopupContent = (map, target, popup) => {
     .addTo(map)
 }
 
+// @params props
+    // {
+    //  display: 'name to display',
+    //  prop: 'name of property'
+    // }
 const makePopupHTML = props => {
     let html = ''
 
