@@ -14,4 +14,18 @@ const ariaShowModal = modal => {
     modal.setAttribute('aria-hidden', 'false')
 }
 
-export { ariaShowModal, ariaHideModal }
+// bundle all modal events into one function
+const handleModal = (modal, modalToggle, closeModal) => {
+    modalToggle.onclick = () => ariaShowModal(modal)
+    closeModal.onclick = () => ariaHideModal(modal)
+
+    modal.onclick = event => {
+        if (event.target == modal) ariaHideModal(modal)
+    }
+    document.onkeydown = event => {
+        if( event.code === 'Escape' && modal.style.display === 'flex' ) ariaHideModal(modal)
+    }
+
+}
+
+export default handleModal

@@ -12,7 +12,7 @@ const makePopupContent = (map, target, popup) => {
 // @params props
     // {
     //  display: 'name to display',
-    //  prop: 'name of property'
+    //  prop: 'value of property'
     // }
 const makePopupHTML = props => {
     let html = ''
