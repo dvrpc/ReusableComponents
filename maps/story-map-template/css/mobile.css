@@ -1,0 +1,51 @@
+/* General */
+body {
+    font-size: 12px;
+}
+/* END General */
+
+
+
+/* Modal */
+#modal-content {
+    width: 85%;
+}
+/* END Modal */
+
+
+
+/* Navbar */
+#dvrpc-logo {
+    width: 55px;
+}
+/* END Navbar */
+
+
+
+/* Main Webmap Area */
+#main-content-wrapper {
+    flex-direction: column-reverse;
+}
+/* END Main Webmap Area */
+
+
+
+/* Sidebar */
+#sidebar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+/* END Sidebar */
+
+
+
+/* Map */
+#map {
+    width: 100%;
+}
+/* END Map */
