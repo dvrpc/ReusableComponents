@@ -177,10 +177,8 @@ nav {
     cursor: default;
 }
 .pagination-circle {
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-    width: 30px;
-    height: 30px;
+    border-radius: var(--border-radius);
+    padding: 1ch;
     cursor: pointer;
 }
 .sidebar-img {
