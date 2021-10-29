@@ -21,6 +21,18 @@ map.on('load', () => {
     // add map events here (click, mousemove, etc)
 })
 
+// pagination (temp)
+// @TODO: actions needed
+    // update other pagintion btn status
+    // update pagination circle state
+    // update content area content
+    // update map layers
+const next = document.getElementById('next-page')
+
+next.onclick = () => {
+    map.flyTo({center: [-75.8, 40.0518322], zoom: 12.1}) 
+}
+
 
 // modal
 handleModal(modal, modalToggle, closeModal)

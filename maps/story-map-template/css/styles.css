@@ -5,7 +5,7 @@
 body {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    line-height: 140%;
+    line-height: 1.4;
     text-rendering: optimizeLegibility;
 }
 h1 {
@@ -15,9 +15,12 @@ h1 {
 :root {
     --theme-dvrpc: #0078ae;
     --theme-dark: #505a5e;
+    --theme-grey: #596469;
+    --theme-grey-lighter: #748388;
 
     --wrapper-padding: 10px;
     --wrapper-padding-double: 20px;
+    --wrapper-padding-triple: 30px;
 
     --border-radius: 4px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
@@ -134,6 +137,7 @@ nav {
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
     width: 35vw;
+    width: 60ch;
     height: 91.5vh;
     z-index: 3;
     overflow-y: auto;
@@ -145,6 +149,17 @@ nav {
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
     min-height: calc(90% - 40px);
+    width: 55ch;
+    margin: 0 auto;
+}
+.sidebar-h2 {
+    color: var(--theme-grey);
+}
+.sidebar-h3 {
+    color: var(--theme-grey-lighter);
+}
+.sidebar-p {
+    margin-bottom: 1.5ch;
 }
 .pagination-nav {
     margin: var(--wrapper-padding-double) 0;
@@ -154,16 +169,19 @@ nav {
 .pagination-btn {
     background-color: transparent;
     border: none;
-    border-bottom: 4px solid vaR(--theme-dvrpc)
+    border-bottom: 4px solid vaR(--theme-dvrpc);
+    cursor: pointer;
 }
 .pagination-btn-inactive {
     border-color: var(--theme-dark);
+    cursor: default;
 }
 .pagination-circle {
     border-radius: 50%;
     box-shadow: var(--box-shadow);
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 .sidebar-img {
     display: block;
