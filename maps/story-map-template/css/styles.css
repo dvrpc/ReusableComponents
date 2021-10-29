@@ -10,6 +10,7 @@ body {
 }
 h1 {
     text-align: center;
+    font-size: 2rem;
 }
 :root {
     --theme-dvrpc: #0078ae;
@@ -144,6 +145,25 @@ nav {
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
     min-height: calc(90% - 40px);
+}
+.pagination-nav {
+    margin: var(--wrapper-padding-double) 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+.pagination-btn {
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid vaR(--theme-dvrpc)
+}
+.pagination-btn-inactive {
+    border-color: var(--theme-dark);
+}
+.pagination-circle {
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    width: 30px;
+    height: 30px;
 }
 .sidebar-img {
     display: block;

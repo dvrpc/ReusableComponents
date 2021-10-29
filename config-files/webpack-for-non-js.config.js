@@ -50,30 +50,6 @@ let indexConfig = new HtmlWebpackPlugin({
         useShortDoctype: true
     }
 })
-// OTHERWISE if a folder has subdirectories with multiple html files, use this process to map over each one 
-const otherHTML = [
-    'the',
-    'name',
-    'of',
-    'HTML',
-    'files',
-    'without',
-    '.html extension'
-]
-const multipleHTMLConfig = otherHTML.map(html => {
-    return new HtmlWebpackPlugin({
-        filename: html + '.html',
-        template: path.resolve(__dirname + `/path/to/the/file/${html}.html`),
-        minify: {
-            collapseWhitespace: true,
-            removeComments: true,
-            removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            useShortDoctype: true
-        }
-    })
-})
 /***** END bundling HTML *****/
 
 
@@ -81,7 +57,7 @@ const multipleHTMLConfig = otherHTML.map(html => {
 /***** JS/CSS Bundle + Static Assets creation *****/
 module.exports = {
     // note: you can just have './js/index.js' if babel isn't needed but it must still be in an array
-    entry: ['@babel/polyfill', './js/index.js'],
+    entry: ['./js/index.js'],
     mode: 'production',
     module: {
         rules: [
@@ -138,8 +114,6 @@ module.exports = {
         path: path.resolve(__dirname, 'build')
     },
     plugins: [
-        // CopyWebpackPlugin moves assets into the build folder
-        // we use it here for the img & css folders b/c this set up assumes you aren't using 'require' or 'import' to load either asset
         new CopyWebpackPlugin({
             patterns: [
                 {
@@ -154,10 +128,7 @@ module.exports = {
                 }
             ]
         }),
-        // add HTML bundle here IF only HTML file is index
         indexConfig
     ]
-    // add HTML bundle here IF multiple HTML files 
-    //].concat(multipleHTMLConfig)
 }
 /***** END bundle *****/

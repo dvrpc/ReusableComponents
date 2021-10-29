@@ -51,6 +51,12 @@
                 <div id="sidebar-content">
                     <h1>Story Header</h1>
 
+                    <nav role="internal" class="pagination-nav flex-row flex-around">
+                        <button type="button" class="pagination-btn pagination-btn-inactive">prev</button>
+                        <button type="button" class="pagination-circle" id="pagination-num">1</button>
+                        <button type="button" class="pagination-btn">next</button>
+                    </nav>
+
                     <p>content goes here. Includes:</p>
                     <ul>
                         <li>scene subheaders</li>
@@ -59,10 +65,6 @@
                         <li>navigation</li>
                     </ul>
                 </div>
-
-                <footer class="flex-column">
-                    footer
-                </footer>
             </article>
 
             <div id="map"></div>
@@ -74,6 +76,10 @@
         
                 <h2 class="modal-content-subheader">Modal content goes here</h2>
                 <p>About the project, methodology, disclaimer, contact info, etc.</p>
+
+                <footer class="flex-column">
+                    footer
+                </footer>
             </div>
         </div>
 
