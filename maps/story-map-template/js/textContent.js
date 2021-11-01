@@ -1,0 +1,32 @@
+/*  
+    input text content here as HTML
+    use the following classes for tags:
+        <h2 class="sidebar-h2">
+        <h3 class="sidebar-h3">
+        <p class="sidebar-p">
+    use backticks `` 
+*/
+const text = {
+    1: `
+        <h2 class="sidebar-h2">scene subheader</h2>
+        <p class="sidebar-p">
+            Retail federal highway administration rising property values mode share safe routes to school. Highest and best use illegal secondary structures new urbanism countdown, gentrification streetscape transferable development right sprawl landscape architecture block group community engagement axis building masses waterways. Normative homeless vacancy, compatible uses equity Census tract speed limit traffic demand management community engagement Le Corbusier signal community garden congestion management groceries developed world. Inventory unincorporated municipal government axis.
+        </p>
+        <h3 class="sidebar-h3">section title</h3>
+        <p class="sidebar-p">
+            Riverwalk bike live-work space, green the parking ratio but. Unmarked crosswalk parking ratio and crossing guard groceries suburb transportation finance commercial city planning effective gross income population density. The esplanade functional environmental impact statement dwelling unit. Communities of concern axis organic congestion management, bike network public works planning ideal bike share external intersection maybe. Census redevelopment industrial, municipal government suburbanization global south low-income infill normative youth developed land unit plan sharrows limited access roadway.
+        </p>
+    `,
+    2: `
+        <h2 class="sidebar-h2">scene subheader</h2>
+        <h3 class="sidebar-h3">section title</h3>
+        <p class="sidebar-p">
+            Riverwalk bike live-work space, green the parking ratio but. Unmarked crosswalk parking ratio and crossing guard groceries suburb transportation finance commercial city planning effective gross income population density. The esplanade functional environmental impact statement dwelling unit. Communities of concern axis organic congestion management, bike network public works planning ideal bike share external intersection maybe. Census redevelopment industrial, municipal government suburbanization global south low-income infill normative youth developed land unit plan sharrows limited access roadway.
+        </p>
+        <p class="sidebar-p">
+            Retail federal highway administration rising property values mode share safe routes to school. Highest and best use illegal secondary structures new urbanism countdown, gentrification streetscape transferable development right sprawl landscape architecture block group community engagement axis building masses waterways. Normative homeless vacancy, compatible uses equity Census tract speed limit traffic demand management community engagement Le Corbusier signal community garden congestion management groceries developed world. Inventory unincorporated municipal government axis.
+        </p>
+    `
+}
+
+export default text
