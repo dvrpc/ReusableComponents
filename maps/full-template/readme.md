@@ -15,7 +15,12 @@
     - create onchange fncs for all form elements (select, radio, checkbox, etc)
         - toggles layer visibility
         - updates legend item (toggle in case of radio, replace in case of others)
+    - add metadata to form elements
+        - value: layer name
+            - use layer name to toggle map visibility
     - save working demo 
+    - consolidate layer and legend into same component
+        - i.e. layer toggles styled to look like legends
 
 ## Output (desktop)
 ![desktop screenshot](./desktop.png)
