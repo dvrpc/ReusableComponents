@@ -47,20 +47,68 @@
         </nav>
 
         <main class="map" id="map">
-            <aside class="legend">
-                <form class="legend-form">
+            <section class="overlay">               
+                <h2 class="overlay-h2">toggle layers</h2>
 
+                <form id="toggle-layers-form" class="overlay-form flex-column">
+                    <fieldset class="overlay-form-toggle-group flex-column">
+                        <select class="overlay-select">
+                            <option selected aria-selected="">layer 1</option>
+                            <option>layer 2</option>
+                        </select>
+    
+                        <select class="overlay-select">
+                            <option selected aria-selected="">layer 1</option>
+                            <option>layer 2</option>
+                        </select>
+                    </fieldset>
+
+                    <label class="label-input overlay-form-toggle-group">
+                        layer 3
+                        <input type="radio">
+                    </label>
+
+                    <fieldset class="overlay-form-toggle-group">
+                        <label class="label-input">
+                            layer 4
+                            <input type="checkbox">
+                        </label>
+    
+                        <label class="label-input">
+                            layer 5
+                            <input type="checkbox">
+                        </label>
+
+                        <label class="label-input">
+                            layer 6
+                            <input type="checkbox">
+                        </label>
+                    </fieldset>
                 </form>
-            </aside>
+
+                <hr class="overlay-hr" />
+
+                <details open>
+                    <summary>
+                        <h2 class="overlay-h2 summary-h2">legend</h2>
+                    </summary>
+
+                    <div class="flex-column">
+                        <aside class="flex-row flex-around">
+                            
+                        </aside>
+                    </div>
+                </details> 
+            </section>
         </main>
 
         <footer class="flex-row flex-around">
             footer
         </footer>
 
-        <div id="modal" role="dialog">
-            <div id="modal-content">
-                <span id="close-modal">&times;</span>
+        <div id="modal" class="modal" role="dialog">
+            <div class="modal-content">
+                <span id="close-modal" class="close-modal">&times;</span>
         
                 <h2 class="modal-content-subheader">Modal content goes here</h2>
                 <p>About the project, methodology, disclaimer, contact info, etc.</p>
