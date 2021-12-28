@@ -17,8 +17,12 @@ summary {
 fieldset {
     font-size: 0.8em;
 }
+select {
+    border-radius: var(--border-radius);
+    padding: 0.5em 0.25em;
+}
 input[type=radio], input[type=checkbox] {
-    margin-right: var(--padding-half);
+    margin-right: 0.75em;
 }
 :root {
     --theme-dvrpc: #0078ae;
@@ -155,7 +159,7 @@ nav {
 .overlay {
     z-index: 2;
     position: absolute;
-    max-width: 25em;
+    max-width: 22. 5em;
     top: 10px;
     left: 10px;
     font-size: 1rem;
@@ -165,7 +169,7 @@ nav {
     border-radius: var(--border-radius);
 }
 .overlay-h2 {
-    font-size: 1.33rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }
 .overlay-hr {
@@ -177,6 +181,7 @@ nav {
 }
 .overlay-form {
     padding: var(--padding);
+    margin-top: var(--padding-half);
     border-radius: var(--border-radius);
 }
 .overlay-form-toggle-group {
