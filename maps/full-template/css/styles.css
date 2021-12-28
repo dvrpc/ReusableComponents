@@ -16,6 +16,7 @@ summary {
 }
 fieldset {
     font-size: 0.8em;
+    border-radius: var(--border-radius);
 }
 select {
     border-radius: var(--border-radius);
@@ -87,10 +88,14 @@ input[type=radio], input[type=checkbox] {
 .modal-content{
     position: relative;
     background: #fff;
-    width: 50%;
+    width: 50em;
     padding: var(--padding-double);
     border-radius: var(--border-radius);
     filter: brightness(150%);
+}
+.modal-section {
+    width: 45em;
+    margin: 0 auto;
 }
 .close-modal{
     position: absolute;
@@ -101,6 +106,10 @@ input[type=radio], input[type=checkbox] {
 .modal-content-subheader {
     text-align: center;
     margin-bottom: 1rem;
+}
+.modal-hr {
+    margin: var(--padding-double) auto;
+    width: 45em;
 }
 /* END Modal */
 
@@ -202,7 +211,7 @@ nav {
     display: block;
     width: 5px;
     height: 25px;
-    margin-right: 10px;
+    margin-right: 12.5px;
     background-color: black;
     transform: rotate(45deg);
 }
