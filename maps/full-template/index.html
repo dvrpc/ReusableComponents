@@ -47,44 +47,72 @@
         </nav>
 
         <main class="map" id="map">
-            <section class="overlay">               
-                <h2 class="overlay-h2">toggle layers</h2>
+            <section class="overlay">     
+                <details open>
+                    <summary>
+                        <h2 class="overlay-h2 summary-h2">toggle layers</h2>
+                    </summary>
 
-                <form id="toggle-layers-form" class="overlay-form flex-column">
-                    <fieldset class="overlay-form-toggle-group flex-column">
-                        <select class="overlay-select">
-                            <option selected aria-selected="">layer 1</option>
-                            <option>layer 2</option>
-                        </select>
-    
-                        <select class="overlay-select">
-                            <option selected aria-selected="">layer 1</option>
-                            <option>layer 2</option>
-                        </select>
-                    </fieldset>
+                    <form id="toggle-layers-form" class="overlay-form flex-column">
+                        <fieldset class="overlay-form-toggle-group flex-column">
+                            <legend>layer group 1</legend>
 
-                    <label class="label-input overlay-form-toggle-group">
-                        layer 3
-                        <input type="radio">
-                    </label>
+                            <select class="overlay-select">
+                                <option>layer 1</option>
+                                <option>layer 2</option>
+                                <option>layer 3</option>
+                            </select>
+                        </fieldset>
 
-                    <fieldset class="overlay-form-toggle-group">
-                        <label class="label-input">
-                            layer 4
-                            <input type="checkbox">
-                        </label>
-    
-                        <label class="label-input">
-                            layer 5
-                            <input type="checkbox">
-                        </label>
+                        <fieldset class="overlay-form-toggle-group">
+                            <legend>layer group 2</legend>
 
-                        <label class="label-input">
-                            layer 6
-                            <input type="checkbox">
-                        </label>
-                    </fieldset>
-                </form>
+                            <label class="label-input overlay-form-toggle-group">
+                                option a
+                                <input type="radio" name="radio-group-1" checked>
+                            </label>
+
+                            <label class="label-input overlay-form-toggle-group">
+                                option b
+                                <input type="radio" name="radio-group-1">
+                            </label>
+
+                            <label class="label-input overlay-form-toggle-group">
+                                option c
+                                <input type="radio" name="radio-group-1">
+                            </label>
+
+                            <label class="label-input overlay-form-toggle-group">
+                                option d
+                                <input type="radio" name="radio-group-1">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="overlay-form-toggle-group">
+                            <legend>layer group 3</legend>
+
+                            <label class="label-input">
+                                layer 4
+                                <input type="checkbox">
+                            </label>
+        
+                            <label class="label-input">
+                                layer 5
+                                <input type="checkbox">
+                            </label>
+
+                            <label class="label-input">
+                                layer 6
+                                <input type="checkbox">
+                            </label>
+
+                            <label class="label-input">
+                                layer 7
+                                <input type="checkbox">
+                            </label>
+                        </fieldset>
+                    </form>
+                </details>
 
                 <hr class="overlay-hr" />
 

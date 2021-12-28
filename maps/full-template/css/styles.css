@@ -14,6 +14,12 @@ h1 {
 summary {
     cursor: pointer;
 }
+fieldset {
+    font-size: 0.8em;
+}
+input[type=radio], input[type=checkbox] {
+    margin-right: var(--padding-half);
+}
 :root {
     --theme-dvrpc: #0078ae;
     --theme-black: #505a5e;
@@ -149,7 +155,7 @@ nav {
 .overlay {
     z-index: 2;
     position: absolute;
-    min-width: 200px;
+    max-width: 25em;
     top: 10px;
     left: 10px;
     font-size: 1rem;
@@ -161,7 +167,6 @@ nav {
 .overlay-h2 {
     font-size: 1.33rem;
     font-weight: 400;
-    margin-bottom: 0.5em;
 }
 .overlay-hr {
     margin: var(--padding-double) 0;
