@@ -29,6 +29,7 @@ input[type=radio], input[type=checkbox] {
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
     --theme-offwhite: #e7e7e7;
+    --theme-offwhite: #f2f2f2;
 
     --padding-half: 5px;
     --padding: 10px;
@@ -36,6 +37,7 @@ input[type=radio], input[type=checkbox] {
 
     --border-radius: 4px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    --box-shadow-half: 0.5px 1px 1.5px rgba(0, 0, 0, 0.15);
 }
 .flex-row {
     display: flex;
@@ -53,6 +55,9 @@ input[type=radio], input[type=checkbox] {
 }
 .flex-end {
     justify-content: flex-end;
+}
+.flex-wrap {
+    flex-wrap: wrap
 }
 .summary-h2 {
     display: inline;
@@ -159,7 +164,7 @@ nav {
 .overlay {
     z-index: 2;
     position: absolute;
-    max-width: 22. 5em;
+    max-width: 22.5em;
     top: 10px;
     left: 10px;
     font-size: 1rem;
@@ -169,8 +174,7 @@ nav {
     border-radius: var(--border-radius);
 }
 .overlay-h2 {
-    font-size: 1.25rem;
-    font-weight: 400;
+    font-size: 1em;
 }
 .overlay-hr {
     margin: var(--padding-double) 0;
@@ -179,13 +183,31 @@ nav {
     background-color: var(--theme-white);
     font-size: inherit;
 }
-.overlay-form {
+.overlay-container {
     padding: var(--padding);
     margin-top: var(--padding-half);
+    box-shadow: var(--box-shadow-half);
     border-radius: var(--border-radius);
 }
 .overlay-form-toggle-group {
     margin-bottom: var(--padding-double);
+}
+.legend-section {
+    padding: 0 var(--padding);
+}
+.legend-item {
+    margin: 10px 30px 10px 0;
+}
+.legend-icon-line {
+    display: block;
+    width: 5px;
+    height: 25px;
+    margin-right: 10px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.legend-text {
+    font-size: 0.75em;
 }
 /* END Map Overlays */
 
