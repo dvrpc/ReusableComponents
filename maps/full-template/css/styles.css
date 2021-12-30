@@ -13,6 +13,7 @@ h1 {
 }
 summary {
     cursor: pointer;
+    margin-top: var(--padding-double);
 }
 fieldset {
     font-size: 0.8em;

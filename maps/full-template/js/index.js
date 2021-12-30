@@ -20,6 +20,17 @@ map.on('load', () => {
     for(const layer in mapLayers) map.addLayer(mapLayers[layer])
 
     // add map events here (click, mousemove, etc)
+
+    // handle simple toggles - layers on/off and corresponding legend items on/off
+    overlayForms.forEach(form => form.onchange = e => {
+        const inputs = form.querySelectorAll('input')
+        const selects = form.querySelectorAll('select')
+
+        const activeInputs = handleFormInputs(inputs)
+        const activeSelects = handleFormSelect(selects)
+        
+        handleLegend([... activeInputs, activeSelects])
+    })
 })
 
 
