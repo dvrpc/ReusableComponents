@@ -118,10 +118,9 @@ nav {
     box-shadow: var(--box-shadow);
     z-index: 2;
 }
-.nav-links {
-    color: var(--theme-white);
-}
 .nav-btn {
+    font-size: 1em;
+    color: var(--theme-white);
     background: transparent;
     border: none;
     text-decoration: underline;
@@ -133,6 +132,9 @@ nav {
 #dvrpc-logo {
     display: block;
     width: 75px;
+}
+.project-logo {
+    margin-right: var(--padding-half);
 }
 /* END Navbar */
 
