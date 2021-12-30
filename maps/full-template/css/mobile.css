@@ -23,23 +23,5 @@ body {
 
 
 /* Main Webmap Area */
-#main-content-wrapper {
-    flex-direction: column-reverse;
-}
+
 /* END Main Webmap Area */
-
-
-
-/* Sidebar */
-#sidebar {
-    width: 100%;
-}
-/* END Sidebar */
-
-
-
-/* Map */
-#map {
-    width: 100%;
-}
-/* END Map */

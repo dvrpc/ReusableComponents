@@ -1,27 +1,22 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
 const initMap = () => {
-    const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.3
-
     return new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-        center: [longitudeOffset, 40.071],
-        zoom: zoom
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [-75.3, 40.071],
+        zoom: 8.25
     })
 }
 
-const makeRegionalExtentControl = map => {
-    const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.3
+const makeRegionalExtentEls = map => {
+    // coordinates and zoom level for regional extent
+    const zoom = window.innerWidth <= 420 ? 7.3 : 8.425
 
     const dvrpcExtent = {
-        center: [longitudeOffset, 40.0518322],
+        center: [-75.3, 40.071],
         zoom: zoom
     }
-
-    const navigationControl = new mapboxgl.NavigationControl();
 
     // create custom button elements
     const button = document.createElement('button')
@@ -41,16 +36,32 @@ const makeRegionalExtentControl = map => {
 
     button.appendChild(icon)
 
+    return button
+}
+
+const makeControls = map => {
+    const geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        placeholder: 'Zoom to location',
+        bbox: [-76.09405517578125,39.49211914385648,-74.32525634765625,40.614734298694216],
+        marker: false
+    })
+
+    const navigationControl = new mapboxgl.NavigationControl();
+    const extentControl = makeRegionalExtentEls(map)
+
     // plug into mapbox fncs
-    navigationControl._extent = button
-    navigationControl._container.appendChild(button)
+    map.addControl(geocoder, 'top-right')
+    
+    navigationControl._extent = extentControl
+    navigationControl._container.appendChild(extentControl)
 
     return navigationControl
 }
 
 const makeMap = () => {
     const map = initMap()
-    const control = makeRegionalExtentControl(map)
+    const control = makeControls(map)
 
     map.addControl(control);
 
