@@ -34,24 +34,29 @@
         <nav class="flex-row flex-between">
             <div class="flex-row">
                 <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
+                
                 <span class="nav-vr">|</span>
-                <button id="modal-toggle" class="nav-btn nav-links">about</button>
-            </div>
+                
+                <img src="./imgs/project-logo.png" alt="project logo" class="project-logo">
+                <h1>Project Name</h1>
+                
+                <span class="nav-vr">|</span>
 
-            <div>
-                <img src="./imgs/project-logo.png" alt="project logo" class="nav-logos">
+                <button id="modal-toggle" class="nav-btn nav-links">about</button>
             </div>
         </nav>
 
         <main class="map" id="map">
             <section class="overlay">
-                <p>this template is intended for basic information and actions - legend and simple togglable layers.</p>
-                <p>for a more robust context, use the sidebar-template or sidebar-float-template and their respective -wide versions.</p>
+                <p>this template is intended for basic maps - legend and simple togglable layers.</p>
+                <small>for a more robust context, use the sidebar-template or sidebar-float-template and their respective -wide versions.</small>
                 
-                <details open>
+                <details>
                     <summary>
                         <h2 class="overlay-h2 summary-h2">toggle layers</h2>
                     </summary>
+
+                    <small>sample form elements + classes to copy/paste/delete</small>
 
                     <form id="toggle-layers-form" class="overlay-container overlay-form flex-column">
                         <fieldset class="overlay-form-toggle-group flex-column">
@@ -60,7 +65,6 @@
                             <select class="overlay-select">
                                 <option value="1">layer 1</option>
                                 <option value="2">layer 2</option>
-                                <option value="3">layer 3</option>
                             </select>
                         </fieldset>
 
@@ -76,39 +80,19 @@
                                 option b
                                 <input type="radio" name="radio-group-1" value="b">
                             </label>
-
-                            <label class="label-input overlay-form-toggle-group">
-                                option c
-                                <input type="radio" name="radio-group-1" value="c">
-                            </label>
-
-                            <label class="label-input overlay-form-toggle-group">
-                                option d
-                                <input type="radio" name="radio-group-1" value="d">
-                            </label>
                         </fieldset>
 
                         <fieldset class="overlay-form-toggle-group">
                             <legend>layer group 3</legend>
 
                             <label class="label-input">
-                                layer 4
+                                layer 3
                                 <input type="checkbox" value="4">
                             </label>
         
                             <label class="label-input">
-                                layer 5
+                                layer 4
                                 <input type="checkbox" value="5">
-                            </label>
-
-                            <label class="label-input">
-                                layer 6
-                                <input type="checkbox" value="6">
-                            </label>
-
-                            <label class="label-input">
-                                layer 7
-                                <input type="checkbox" value="7">
                             </label>
                         </fieldset>
                     </form>

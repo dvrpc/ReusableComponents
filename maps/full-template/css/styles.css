@@ -13,7 +13,7 @@ h1 {
 }
 summary {
     cursor: pointer;
-    margin-top: var(--padding-double);
+    margin: var(--padding-double) 0 var(--padding-half) 0;
 }
 fieldset {
     font-size: 0.8em;
@@ -137,10 +137,15 @@ nav {
 }
 .nav-vr {
     margin: 0 5px;
+    font-size: 1.25em;
+    font-weight: 400;
 }
 #dvrpc-logo {
     display: block;
     width: 75px;
+}
+.project-logo {
+    margin-right: var(--padding-half);
 }
 /* END Navbar */
 
@@ -189,6 +194,7 @@ nav {
 }
 .overlay-h2 {
     font-size: 1em;
+    color: var(--theme-dvrpc);
 }
 .overlay-hr {
     margin: var(--padding-double) 0;
@@ -239,7 +245,8 @@ nav {
 /* Footer */
 footer {
     position: relative;
-    box-shadow: var(--box-shadow-up);
+    z-index: 1;
+    box-shadow: var(--box-shadow);
     padding: 0 var(--padding);
     height: 6vh;
     background-color: var(--theme-black);
