@@ -20,7 +20,7 @@ const map = makeMap()
 
 map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
-    for(const layer in mapLayers) map.addLayer(mapLayers[layer])
+    for(const layer in mapLayers) map.addLayer(mapLayers[layer], 'road-label')
 
     // add map events here (click, mousemove, etc)
 

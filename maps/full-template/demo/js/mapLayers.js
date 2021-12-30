@@ -1,3 +1,4 @@
+// put the default layers here
 const layers = {
     countyOutline: {
         "id": "county-outline",
@@ -23,8 +24,22 @@ const layers = {
             'line-width': 0.5,
             'line-color': '#4a5c64'
         }
+    },
+    'truck-v2': {
+        'id': 'truck-v2',
+        'type': 'circle',
+        'source': 'freight-inrix',
+        'source-layer': 'truck',
+        'paint': {
+            'circle-radius': 1.5,
+            'circle-color': 'green'
+        },
+        'filter': [
+            '==',
+            'v',
+            2
+        ]
     }
-    // add more layers here
 }
 
 export default layers
