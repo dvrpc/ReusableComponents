@@ -12,15 +12,43 @@
     - that's it. Mapbox is the only external source, everything else is vanilla. The rest of the content and styles are up to you. Happy hacking. 
 
 ## TODO
-    - create onchange fncs for all form elements (select, radio, checkbox, etc)
-        - toggles layer visibility
-        - updates legend item (toggle in case of radio, replace in case of others)
-    - add metadata to form elements
-        - value: layer name
-            - use layer name to toggle map visibility
-    - save working demo 
-    - consolidate layer and legend into same component
-        - i.e. layer toggles styled to look like legends
+    - save working demo
+        - include: <fieldset class="overlay-form-toggle-group flex-column">
+                            <legend>layer group 1</legend>
+
+                            <select class="overlay-select">
+                                <option value="1">layer 1</option>
+                                <option value="2">layer 2</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="overlay-form-toggle-group">
+                            <legend>layer group 2</legend>
+
+                            <label class="label-input overlay-form-toggle-group">
+                                option a
+                                <input type="radio" name="radio-group-1" value="a" checked>
+                            </label>
+
+                            <label class="label-input overlay-form-toggle-group">
+                                option b
+                                <input type="radio" name="radio-group-1" value="b">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="overlay-form-toggle-group">
+                            <legend>layer group 3</legend>
+
+                            <label class="label-input">
+                                layer 3
+                                <input type="checkbox" value="3">
+                            </label>
+        
+                            <label class="label-input">
+                                layer 4
+                                <input type="checkbox" value="4">
+                            </label>
+                        </fieldset>
 
 ## Output (desktop)
 ![desktop screenshot](./desktop.png)

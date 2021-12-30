@@ -10,14 +10,14 @@ const handleFormInputs = (inputs, map) => {
 
         if(map.getLayer(layer)) {
             active.push(layer)
-            //map.setLayoutProperty('visibility', layer, checked)
+            map.setLayoutProperty('visibility', layer, checked)
         }
         else {
             if(checked) {
                 active.push(layer)
                 // add layer
                 const mapLayer = mapLayers[layer]
-                //map.addLayer(mapLayer)
+                map.addLayer(mapLayer)
             }
         }
     })
@@ -38,7 +38,7 @@ const handleFormSelect = (selects, map) => {
 
             if(map.getLayer(layer)) {
                 active.push(layer)
-                //map.setLayoutProperty('visibility', layer, selected)
+                map.setLayoutProperty('visibility', layer, selected)
             }
             else {
                 if(selected) {
@@ -46,7 +46,7 @@ const handleFormSelect = (selects, map) => {
                     
                     // add layer
                     const mapLayer = mapLayers[layer]
-                    //map.addLayer(mapLayer)
+                    map.addLayer(mapLayer)
                 }
             }            
         })
