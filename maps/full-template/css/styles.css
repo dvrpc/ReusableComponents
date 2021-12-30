@@ -98,7 +98,6 @@ a {
     width: 50em;
     padding: var(--padding-double);
     border-radius: var(--border-radius);
-    filter: brightness(150%);
 }
 .modal-section {
     width: 45em;
@@ -194,7 +193,7 @@ nav {
     left: 10px;
     font-size: 1rem;
     padding: var(--padding);
-    background-color: var(--theme-offwhite);
+    background-color: var(--theme-white);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
