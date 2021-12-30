@@ -40,11 +40,6 @@
                 <span class="nav-vr">|</span>
                 <button id="modal-toggle" class="nav-btn nav-links">about</button>
             </div>
-
-            <div>
-                <a href="/" class="nav-links">other</a>
-                <a href="/" class="nav-links">links</a>
-            </div>
         </nav>
 
         <main id="main-content-wrapper" class="flex-row flex-between">
@@ -63,15 +58,33 @@
             <div id="map"></div>
         </main>
 
-        <div id="modal" role="dialog">
-            <div id="modal-content">
-                <span id="close-modal">&times;</span>
+        <div id="modal" class="modal" role="dialog">
+            <div class="modal-content">
+                <span id="close-modal" class="close-modal">&times;</span>
         
-                <h2 class="modal-content-subheader">Modal content goes here</h2>
-                <p>About the project, methodology, disclaimer, contact info, etc.</p>
+                <h2 class="modal-content-subheader">Project Name</h2>
+
+                <section class="modal-section">
+                    <h3>About</h3>
+                    <p>Use this template to bootstrap a simple point and click map. Overlay has sample elements + classes for different layer toggle types and legend types.</p>
+                </section>
+
+                <hr class="modal-hr" />
+
+                <section class="modal-section">
+                    <h3>Methodology</h3>
+                    <p>lorem ipsum...</p>
+                </section>
+
+                <hr class="modal-hr" />
+
+                <section class="modal-section">
+                    <h3>Disclaimer</h3>
+                    <p>lorem ipsum...</p>
+                </section>
             </div>
         </div>
-        
+
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
     </body>
