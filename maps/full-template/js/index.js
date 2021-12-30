@@ -4,7 +4,6 @@ import mapLayers from './mapLayers.js'
 import handleModal from './modal.js'
 import handleForms from './forms.js'
 import handleLegend from './legend.js'
-// add additional imports here (popups, forms, etc)
 
 
 const modal = document.getElementById('modal')
@@ -14,7 +13,6 @@ const legendContainer = document.getElementById('legend-container')
 const toggleForm = document.getElementById('toggle-form')
 const inputs = toggleForm.querySelectorAll('input')
 const selects = toggleForm.querySelectorAll('select')
-// get additional elements here (forms, etc)
 
 
 // map
@@ -26,11 +24,18 @@ map.on('load', () => {
 
     // add map events here (click, mousemove, etc)
 
+    // set default form state
+    let activeInputs = handleForms('input', inputs, map)
+    let activeSelects = handleForms('select', selects, map)
+    let allActiveToggles = [... activeSelects, ... activeInputs]
+
+    handleLegend(allActiveToggles, legendContainer)
+
     // handle simple toggles - layers on/off and corresponding legend items on/off
     toggleForm.onchange = () => {
-        const activeInputs = handleForms('input', inputs, map)
-        const activeSelects = handleForms('select', selects, map)
-        const allActiveToggles = [... activeSelects, ... activeInputs]
+        activeInputs = handleForms('input', inputs, map)
+        activeSelects = handleForms('select', selects, map)
+        allActiveToggles = [... activeSelects, ... activeInputs]
 
         handleLegend(allActiveToggles, legendContainer)
     }

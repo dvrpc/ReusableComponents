@@ -14,9 +14,7 @@ const createLegendItem = val => {
 
 const handleLegend = (vals, container) => {
     let legendItems = ''
-    console.log(vals.map(val => createLegendItem(val)))
-    legendItems += [... vals.map(val => createLegendItem(val))]
-    console.log(legendItems)
+    legendItems += vals.map(val => createLegendItem(val)).join('')
 
     // wholesale clear and replace
     while(container.firstChild) container.removeChild(container.firstChild)
