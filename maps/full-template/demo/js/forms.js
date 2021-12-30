@@ -9,14 +9,14 @@ const handleFormInputs = (inputs, map) => {
         const checked = input.checked
         const visibility = checked ? 'visible' : 'none'
 
+        if(checked) active.push(layer)
+
         if(map.getLayer(layer)) {
-            active.push(layer)
             map.setLayoutProperty(layer, 'visibility', visibility)
         }
         else {
+            // add layer on first pass
             if(checked) {
-                active.push(layer)
-                // add layer
                 const mapLayer = secondaryMapLayers[layer]
                 map.addLayer(mapLayer, 'road-label')
             }
@@ -44,9 +44,8 @@ const handleFormSelect = (selects, map) => {
                 map.setLayoutProperty(layer, 'visibility', visibility)
             }
             else {
+                // add layer on first pass
                 if(selected) {
-
-                    // add layer
                     const mapLayer = secondaryMapLayers[layer]
                     map.addLayer(mapLayer)
                 }

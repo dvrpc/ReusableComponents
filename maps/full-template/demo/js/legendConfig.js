@@ -19,6 +19,16 @@ const legendConfig = {
         iconType: 'circle',
         label: 'truck v3',
         color: 'orange'
+    },
+    'walk-buffer': {
+        iconType: 'line',
+        label: 'walk buffer',
+        color: 'purple'
+    },
+    'cycle-buffer': {
+        iconType: 'line',
+        label: 'cycle buffer',
+        color: 'red'
     }
 }
 

@@ -6,8 +6,11 @@ const sources = {
     'freight-inrix': {
         type: 'vector',
         url: 'https://tiles.dvrpc.org/data/freight-inrix.json'
+    },
+    'access-score': {
+        type: 'vector',
+        url: 'https://tiles.dvrpc.org/data/access-score.json'
     }
-    // add more sources here
 }
 
 export default sources

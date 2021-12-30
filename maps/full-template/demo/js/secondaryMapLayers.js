@@ -14,6 +14,26 @@ const secondaryMapLayers = {
             'v',
             3
         ]
+    },
+    'walk-buffer': {
+        'id': 'walk-buffer',
+        'type': 'line',
+        'source': 'access-score',
+        'source-layer': 'walk_buffer',
+        'paint': {
+            'line-width': 0.5,
+            'line-color': 'purple'
+        }
+    },
+    'cycle-buffer': {
+        'id': 'cycle-buffer',
+        'type': 'line',
+        'source': 'access-score',
+        'source-layer': 'cycle_buffer',
+        'paint': {
+            'line-width': 0.5,
+            'line-color': 'red'
+        }
     }
 }
 
