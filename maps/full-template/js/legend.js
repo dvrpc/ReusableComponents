@@ -6,12 +6,21 @@ const createLegendItem = val => {
 
     return `
         <div class="flex-row flex-between flex-align-center legend-item">
-            <span class="legend-icon-${legendDetails.type} line-blue"></span>
-            <span class="legend-text">${legendDetails.legendLabel}</span>
+            <span class="legend-icon-${legendDetails.iconType}" style="background-color:${legendDetails.color};"></span>
+            <span class="legend-text">${legendDetails.label}</span>
         </div>
     `
 }
 
-const handleLegend = vals => vals.map(createLegendItem(val))
+const handleLegend = (vals, container) => {
+    let legendItems = ''
+    console.log(vals.map(val => createLegendItem(val)))
+    legendItems += [... vals.map(val => createLegendItem(val))]
+    console.log(legendItems)
+
+    // wholesale clear and replace
+    while(container.firstChild) container.removeChild(container.firstChild)
+    container.insertAdjacentHTML('afterbegin', legendItems)
+}
 
 export default handleLegend

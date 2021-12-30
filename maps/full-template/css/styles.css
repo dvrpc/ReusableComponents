@@ -224,7 +224,6 @@ nav {
     width: 5px;
     height: 25px;
     margin-right: 12.5px;
-    background-color: var(--theme-black);
     transform: rotate(45deg);
 }
 .legend-icon-circle {
@@ -233,7 +232,6 @@ nav {
     height: 20px;
     margin-right: 5px;
     border-radius: 50%;
-    background-color: var(--theme-dvrpc);
 }
 .legend-text {
     font-size: 0.75em;
