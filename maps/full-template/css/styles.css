@@ -126,14 +126,14 @@ nav {
     box-shadow: var(--box-shadow);
     z-index: 1;
 }
-.nav-links {
-    color: #f7f7f7;
-}
 .nav-btn {
+    font-size: 1em;
+    color: #f7f7f7;
     background: transparent;
     border: none;
     text-decoration: underline;
     padding: 0;
+    cursor: pointer;
 }
 .nav-vr {
     margin: 0 5px;

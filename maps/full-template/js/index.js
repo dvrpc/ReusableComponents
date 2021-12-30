@@ -2,6 +2,7 @@ import makeMap from './map.js'
 import sources from './mapSources.js'
 import mapLayers from './mapLayers.js'
 import handleModal from './modal.js'
+import handleForms from './forms.js'
 // add additional imports here (popups, forms, etc)
 
 
@@ -22,65 +23,14 @@ map.on('load', () => {
     // add map events here (click, mousemove, etc)
 
     // handle simple toggles - layers on/off and corresponding legend items on/off
-    overlayForms.forEach(form => form.onchange = e => {
+    overlayForms.forEach(form => form.onchange = () => {
         const inputs = form.querySelectorAll('input')
         const selects = form.querySelectorAll('select')
 
-        const activeInputs = handleFormInputs(inputs)
-        const activeSelects = handleFormSelect(selects)
+        const activeInputs = handleForms('input', inputs, map)
+        const activeSelects = handleForms('select', selects, map)
         
-        handleLegend([... activeInputs, activeSelects])
-    })
-})
-
-
-// handle forms
-overlayForms.forEach(form => form.onchange = e => {
-    const inputs = form.querySelectorAll('input')
-    const selects = form.querySelectorAll('select')
-    
-    // show/hide all inputs
-    inputs.forEach(input => {
-        const layer = input.value
-        const checked = input.checked
-
-        if(map.getLayer(layer)) {
-            map.setLayoutProperty('visibility', layer, checked)
-        }
-        else {
-            if(checked) {
-                // add layer
-                // const mapLayer = mapLayers[layer]
-                // map.addLayer(mapLayer)
-            }
-        }
-    })
-
-    // show/hide all checks
-    selects.forEach(select => {
-        console.log(select)
-        const options = Array.from(select.children)
-
-        options.forEach(option => {
-            const layer = option.value
-            const selected = option.selected
-
-            console.log('layer ', layer)
-            console.log('selected ', selected)
-
-            // if selected and hasLayer, map.setLayoutProperty
-            // if !selected and hasLayer, map.setLayoutProperty
-            // if selected and !hasLayer, map.addLayer
-            // if !selected and !hasLayer, skip
-            if(map.getLayer(layer)) {
-                map.setLayoutProperty('visibility', layer, selected)
-            }
-            else {
-                if(selected) {
-                    // add layer
-                }
-            }            
-        })
+        handleLegend([... activeInputs, ... activeSelects])
     })
 })
 

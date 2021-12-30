@@ -1,17 +1,67 @@
-// return layer to be toggled
-const toggleLayers = (form, map) => {
-    form.onchange = e => {
-        const target = e.target
-        const layer = target.value
-        
-        if(!map.getLayer(layer)) {
-            map.addLayer(layer)
+import mapLayers from './mapLayers.js'
+
+// handles: checkboxes, toggles, radio buttons
+const handleFormInputs = (inputs, map) => {
+    let active = []
+
+    inputs.forEach(input => {
+        const layer = input.value
+        const checked = input.checked
+
+        if(map.getLayer(layer)) {
+            active.push(layer)
+            map.setLayoutProperty('visibility', layer, checked)
         }
-        
-        const visibility = target.checked ? 'visible' : 'none'
-        
-        map.setLayoutProperty(layer, 'visibility', visibility)
+        else {
+            if(checked) {
+                active.push(layer)
+                // add layer
+                const mapLayer = mapLayers[layer]
+                map.addLayer(mapLayer)
+            }
+        }
+    })
+
+    return active
+}
+
+// handles: select
+const handleFormSelect = (selects, map) => {
+    let active = []
+
+    selects.forEach(select => {
+        const options = Array.from(select.children)
+
+        options.forEach(option => {
+            const layer = option.value
+            const selected = option.selected
+
+            if(map.getLayer(layer)) {
+                active.push(layer)
+                map.setLayoutProperty('visibility', layer, selected)
+            }
+            else {
+                if(selected) {
+                    active.push(layer)
+                    
+                    // add layer
+                    const mapLayer = mapLayers[layer]
+                    map.addLayer(mapLayer)
+                }
+            }            
+        })
+    })
+
+    return active
+}
+
+const handleForms = (type, toggles, map) => {
+    switch(type) {
+        case 'select':
+            return handleFormSelect(toggles, map)
+        default:
+            return handleFormInputs(toggles, map)
     }
 }
 
-export { toggleLayers }
+export default handleForms
