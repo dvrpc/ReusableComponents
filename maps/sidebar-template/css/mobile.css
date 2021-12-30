@@ -7,7 +7,7 @@ body {
 
 
 /* Modal */
-#modal-content {
+.modal-content {
     width: 85%;
 }
 /* END Modal */
@@ -23,7 +23,7 @@ body {
 
 
 /* Main Webmap Area */
-#main-content-wrapper {
+.main-content-wrapper {
     flex-direction: column-reverse;
 }
 /* END Main Webmap Area */
@@ -31,7 +31,7 @@ body {
 
 
 /* Sidebar */
-#sidebar {
+.sidebar {
     width: 100%;
 }
 /* END Sidebar */
@@ -39,7 +39,7 @@ body {
 
 
 /* Map */
-#map {
+.map {
     width: 100%;
 }
 /* END Map */

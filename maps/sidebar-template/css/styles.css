@@ -125,6 +125,7 @@ nav {
     border: none;
     text-decoration: underline;
     padding: 0;
+    cursor: pointer;
 }
 .nav-vr {
     margin: 0 5px;
@@ -141,7 +142,7 @@ nav {
 
 
 /* Main Webmap Area */
-#main-content-wrapper {
+.main-content-wrapper {
     height: 94vh;
 }
 #regional-extent-img {
@@ -155,7 +156,7 @@ nav {
 
 
 /* Sidebar */
-#sidebar {
+.sidebar {
     width: 30%;
     height: 100%;
     overflow-y: auto;
@@ -164,9 +165,12 @@ nav {
     box-shadow: var(--box-shadow-half);
     z-index: 1;
 }
-#sidebar-content {
+.sidebar-content {
     padding: var(--padding-double) var(--padding);
     min-height: calc(90% - 40px);
+}
+.sidebar-h2 {
+    color: var(--theme-dvrpc);
 }
 .sidebar-img {
     display: block;
@@ -190,7 +194,7 @@ nav {
 
 
 /* Map */
-#map {
+.map {
     width: 70%;
     height: 100%;
 }

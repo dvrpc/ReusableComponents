@@ -31,7 +31,7 @@ map.on('load', () => {
     let activeSelects = handleForms('select', selects, map)
     let allActiveToggles = [... activeSelects, ... activeInputs]
 
-    handleLegend(allActiveToggles, legendContainer)
+    // handleLegend(allActiveToggles, legendContainer)
 
     // handle simple toggles - layers on/off and corresponding legend items on/off
     toggleForm.onchange = () => {
@@ -39,7 +39,7 @@ map.on('load', () => {
         activeSelects = handleForms('select', selects, map)
         allActiveToggles = [... activeSelects, ... activeInputs]
 
-        handleLegend(allActiveToggles, legendContainer)
+        // handleLegend(allActiveToggles, legendContainer)
     }
 })
 

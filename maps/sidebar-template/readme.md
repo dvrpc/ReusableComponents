@@ -1,3 +1,5 @@
+# Standard Map Template
+
 ## Includes
 - About modal (add tabs by pulling code from tabs folder)
 - DVRPC extent map overlay to easily re-orient view to the DVRPC region
