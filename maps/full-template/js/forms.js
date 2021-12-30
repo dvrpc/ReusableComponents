@@ -1,4 +1,4 @@
-import mapLayers from './mapLayers.js'
+import secondaryMapLayers from './secondaryMapLayers.js'
 
 // handles: checkboxes, toggles, radio buttons
 const handleFormInputs = (inputs, map) => {
@@ -7,17 +7,18 @@ const handleFormInputs = (inputs, map) => {
     inputs.forEach(input => {
         const layer = input.value
         const checked = input.checked
+        const visibility = checked ? 'visible' : 'none'
+
+        if(checked) active.push(layer)
 
         if(map.getLayer(layer)) {
-            active.push(layer)
-            map.setLayoutProperty('visibility', layer, checked)
+            map.setLayoutProperty(layer, 'visibility', visibility)
         }
         else {
+            // add layer on first pass
             if(checked) {
-                active.push(layer)
-                // add layer
-                const mapLayer = mapLayers[layer]
-                map.addLayer(mapLayer)
+                const mapLayer = secondaryMapLayers[layer]
+                map.addLayer(mapLayer, 'road-label')
             }
         }
     })
@@ -35,17 +36,17 @@ const handleFormSelect = (selects, map) => {
         options.forEach(option => {
             const layer = option.value
             const selected = option.selected
+            const visibility = selected ? 'visible' : 'none'
+
+            if(selected) active.push(layer)
 
             if(map.getLayer(layer)) {
-                active.push(layer)
-                map.setLayoutProperty('visibility', layer, selected)
+                map.setLayoutProperty(layer, 'visibility', visibility)
             }
             else {
+                // add layer on first pass
                 if(selected) {
-                    active.push(layer)
-                    
-                    // add layer
-                    const mapLayer = mapLayers[layer]
+                    const mapLayer = secondaryMapLayers[layer]
                     map.addLayer(mapLayer)
                 }
             }            
