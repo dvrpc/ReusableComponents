@@ -13,7 +13,6 @@ h1 {
 }
 summary {
     cursor: pointer;
-    margin: var(--padding-double) 0 var(--padding-half) 0;
 }
 fieldset {
     font-size: 0.8em;
@@ -34,6 +33,7 @@ a {
 }
 :root {
     --theme-dvrpc: #0078ae;
+    --theme-dvrpc-accent: #366478;
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
     --theme-offwhite: #e7e7e7;
@@ -75,9 +75,6 @@ a {
 
 
 /* Modal */
-.modal-content{
-    box-shadow: var(--box-shadow);
-}
 .modal-toggle, .close-modal{
     cursor: pointer;
     font-size: inherit;
@@ -98,10 +95,17 @@ a {
     width: 50em;
     padding: var(--padding-double);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.modal-content p, .modal-content span {
+    margin-top: 0.25em;
 }
 .modal-section {
     width: 45em;
     margin: 0 auto;
+}
+.modal-section h3 {
+    color: var(--theme-dvrpc-accent);
 }
 .close-modal{
     position: absolute;
@@ -112,6 +116,7 @@ a {
 .modal-content-subheader {
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--theme-dvrpc);
 }
 .modal-hr {
     margin: var(--padding-double) auto;
@@ -184,7 +189,8 @@ nav {
 .overlay {
     z-index: 2;
     position: absolute;
-    max-width: 22.5em;
+    /* max-width: 22.5em; */
+    width: 15em;
     /* map pad(10px) + map pad(10px) + section padding(20px) = 40px */
     max-height: calc(88vh - 40px);
     overflow-x: hidden;
@@ -196,6 +202,12 @@ nav {
     background-color: var(--theme-white);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
+}
+.overlay-details {
+    margin: var(--padding-double) 0 var(--padding-half) 0;
+}
+.overlay-details:first-of-type {
+    margin-top: var(--padding-half);
 }
 .overlay-h2 {
     font-size: 1em;
@@ -215,7 +227,10 @@ nav {
     border-radius: var(--border-radius);
 }
 .overlay-form-toggle-group {
-    margin-bottom: var(--padding-double);
+    margin-bottom: var(--padding);
+}
+.overlay-form-toggle-group:last-child {
+    margin-bottom: 0;
 }
 .legend-section {
     padding: 0 var(--padding);

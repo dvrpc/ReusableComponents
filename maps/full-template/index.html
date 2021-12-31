@@ -49,22 +49,17 @@
 
         <main class="map" id="map">
             <section class="overlay">
-                <p>this template is intended for basic maps - legend and simple togglable layers.</p>
-                <small>for a more robust context, use the sidebar-template or sidebar-float-template.</small>
-                
-                <details>
+                <details class="overlay-details" open>
                     <summary>
                         <h2 class="overlay-h2 summary-h2">toggle layers</h2>
                     </summary>
-
                     
                     <form id="toggle-form" class="overlay-container overlay-form flex-column">
                         <small>add form elements here. <strong>required:</strong> fill out "value" attribute on each form input element</small>
-                        
                     </form>
                 </details>
 
-                <details open>
+                <details class="overlay-details" open>
                     <summary>
                         <h2 class="overlay-h2 summary-h2">legend</h2>
                     </summary>
@@ -72,6 +67,7 @@
                     <div class="flex-column">
                         <aside class="overlay-container legend-section flex-column">
                             <div id="legend-container" class="legend-content-container flex-row flex-wrap">
+                            
                             </div>
                         </aside>
                     </div>
@@ -93,7 +89,8 @@
 
                 <section class="modal-section">
                     <h3>About</h3>
-                    <p>Use this template to bootstrap a simple point and click map. Overlay has sample elements + classes for different layer toggle types and legend types.</p>
+                    <p>Use this template to bootstrap a simple point and click map with togglable layers. Form handling and legend updates are baked in, see the demo repo for a working example.</p>
+                    <p>This template is intended for basic maps - for a more robust context, use the sidebar-template or sidebar-float-template.</p>
                 </section>
 
                 <hr class="modal-hr" />

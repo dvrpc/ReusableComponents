@@ -1,4 +1,4 @@
-# Simple "Click and Point" Template
+# Simple "Point and Click" Template
 
 ## Includes
 - About modal (add tabs by pulling code from tabs folder)

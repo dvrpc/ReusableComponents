@@ -38,7 +38,7 @@
                 
                 <span class="nav-vr">|</span>
                 
-                <h1>Wide Template Demo</h1>
+                <h1>Full Template Demo</h1>
                 
                 <span class="nav-vr">|</span>
 
@@ -47,14 +47,11 @@
         </nav>
 
         <main class="map" id="map">
-            <section class="overlay">
-                <p>Demo for the full width template. Toggle layers in the form below to update map layers and legend.</p>
-                
-                <details>
+            <section class="overlay">                
+                <details class="overlay-details" open>
                     <summary>
                         <h2 class="overlay-h2 summary-h2">toggle layers</h2>
                     </summary>
-
                     
                     <form id="toggle-form" class="overlay-container overlay-form flex-column">
                         <fieldset class="overlay-form-toggle-group flex-column">
@@ -82,7 +79,7 @@
                     </form>
                 </details>
 
-                <details open>
+                <details class="overlay-details" open>
                     <summary>
                         <h2 class="overlay-h2 summary-h2">legend</h2>
                     </summary>
@@ -98,7 +95,7 @@
                 <hr class="overlay-hr" />
 
                 <footer class="flex-row flex-align-center">
-                    contact: <a href="mailto:">project owner</a>
+                    contact: <a href="mailto:">project contact</a>
                 </footer>
             </section>
         </main>
@@ -107,11 +104,13 @@
             <div class="modal-content">
                 <span id="close-modal" class="close-modal">&times;</span>
         
-                <h2 class="modal-content-subheader">Wide Template Demo</h2>
+                <h2 class="modal-content-subheader">Full Template Demo</h2>
 
                 <section class="modal-section">
                     <h3>About</h3>
-                    <p>Use this template to bootstrap a simple point and click map. Overlay has sample elements + classes for different layer toggle types and legend types.</p>
+                    <p>Working demo using the full-template to bootstrap a simple map with togglable layers.</p>
+                    <p>Sample code for legend and map content can be found in the <code>legendConfig</code>, <code>mapSources</code>, <code>mapLayers</code> and <code>secondaryMapLayers</code> files.</p>
+                    <p>Sample code for form controls can be found in the overlay component on this page.</p>
                 </section>
 
                 <hr class="modal-hr" />
