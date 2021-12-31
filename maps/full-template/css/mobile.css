@@ -23,5 +23,18 @@ body {
 
 
 /* Main Webmap Area */
-
+.mapboxgl-ctrl-geocoder {
+    font-size: 0.9rem;
+    min-width: unset;
+    width: 75%;
+}
+.mapboxgl-ctrl-geocoder--input {
+    height: 30px;
+    padding: 6px 35px;
+    padding-right: 0;
+}
+.mapboxgl-ctrl-geocoder--icon-search {
+    top: 3px;
+    left: 6px;
+}
 /* END Main Webmap Area */
