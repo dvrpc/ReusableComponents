@@ -27,6 +27,7 @@ a {
 }
 :root {
     --theme-dvrpc: #0078ae;
+    --theme-dvrpc-accent: #366478;
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
     --theme-offwhite: #f2f2f2;
@@ -62,9 +63,6 @@ a {
 
 
 /* Modal */
-.modal-content{
-    box-shadow: var(--box-shadow);
-}
 .modal-toggle, .close-modal{
     cursor: pointer;
     font-size: inherit;
@@ -85,10 +83,17 @@ a {
     width: 50em;
     padding: var(--padding-double);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+.modal-content p, .modal-content span {
+    margin-top: 0.25em;
 }
 .modal-section {
     width: 45em;
     margin: 0 auto;
+}
+.modal-section h3 {
+    color: var(--theme-dvrpc-accent);
 }
 .close-modal{
     position: absolute;

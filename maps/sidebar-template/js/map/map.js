@@ -5,13 +5,16 @@ const initMap = () => {
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
         center: [-75.2273, 40.071],
-        bounds: [[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]],
+        bounds: [[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]
     })
 }
 
 const makeRegionalExtentEls = map => {
+    let zoom = window.innerWidth <= 420 ? 7.3 : 8.42
+    
     const dvrpcExtent = {
         center: [-75.2273, 40.071],
+        zoom: zoom,
         pitch: 0,
         bearing: 0
     }
