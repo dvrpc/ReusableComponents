@@ -42,4 +42,22 @@ body {
 .map {
     width: 100%;
 }
+.legend-container {
+    min-width: unset;
+    min-height: unset;
+}
+.mapboxgl-ctrl-geocoder {
+    font-size: 0.8rem;
+    min-width: unset;
+    width: 75%;
+}
+.mapboxgl-ctrl-geocoder--input {
+    height: 30px;
+    padding: 6px 35px;
+    padding-right: 0;
+}
+.mapboxgl-ctrl-geocoder--icon-search {
+    top: 3px;
+    left: 6px;
+}
 /* END Map */

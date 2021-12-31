@@ -208,6 +208,18 @@ nav {
 .popup-span:not(:last-of-type) {
     border-bottom: 1px dotted var(--theme-black);
 }
+.legend-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    min-height: 40px;
+    min-width: 140px;
+    z-index: 1;
+    padding: var(--padding);
+}
 /* END Map */
 
 
