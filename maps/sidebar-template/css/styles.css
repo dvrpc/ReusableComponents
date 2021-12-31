@@ -99,6 +99,7 @@ a {
 .modal-content-subheader {
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--theme-dvrpc);
 }
 .modal-hr {
     margin: var(--padding-double) auto;
@@ -166,8 +167,8 @@ nav {
     z-index: 1;
 }
 .sidebar-content {
-    padding: var(--padding-double) var(--padding);
-    min-height: calc(90% - 40px);
+    padding: var(--padding);
+    min-height: calc(95% - 20px);
 }
 .sidebar-h2 {
     color: var(--theme-dvrpc);
@@ -213,10 +214,12 @@ nav {
 
 /* Footer */
 footer {
-    padding: var(--padding);
+    height: calc(5% - 20px);
     width: 100%;
-    min-height: calc(10% - 20px);
-    background-color: var(--theme-black);
-    color: var(--theme-offwhite);
+    padding: var(--padding);
+    box-shadow: var(--box-shadow);
+    overflow-y: auto;
+    background-color: var(--theme-offwhite);
+    color: var(--theme-black);
 }
 /* END Footer */

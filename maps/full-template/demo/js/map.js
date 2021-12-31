@@ -15,7 +15,9 @@ const makeRegionalExtentEls = map => {
 
     const dvrpcExtent = {
         center: [-75.3, 40.071],
-        zoom: zoom
+        zoom: zoom,
+        pitch: 0,
+        bearing: 0
     }
 
     // create custom button elements
