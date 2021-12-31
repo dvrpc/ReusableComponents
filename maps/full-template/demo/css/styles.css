@@ -36,7 +36,6 @@ a {
     --theme-dvrpc-accent: #366478;
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
-    --theme-offwhite: #e7e7e7;
     --theme-offwhite: #f2f2f2;
 
     --padding-half: 5px;
@@ -189,7 +188,6 @@ nav {
 .overlay {
     z-index: 2;
     position: absolute;
-    /* max-width: 22.5em; */
     width: 15em;
     /* map pad(10px) + map pad(10px) + section padding(20px) = 40px */
     max-height: calc(88vh - 40px);
@@ -199,7 +197,7 @@ nav {
     left: 10px;
     font-size: 1rem;
     padding: var(--padding);
-    background-color: var(--theme-white);
+    background-color: var(--theme-offwhite);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
