@@ -1,4 +1,4 @@
-# Standard Map Template
+# Sidebar Webmap Template
 
 ## Includes
 - About modal (add tabs by pulling code from tabs folder)

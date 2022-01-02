@@ -1,4 +1,4 @@
-# Floating, responsive webmap template
+# Floating Sidebar Webmap Template
 
 
 ## Includes

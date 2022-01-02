@@ -1,4 +1,4 @@
-# Simple "Point and Click" Template
+# Simple Toggles Webmap Template
 
 ## Includes
 - About modal (add tabs by pulling code from tabs folder)
