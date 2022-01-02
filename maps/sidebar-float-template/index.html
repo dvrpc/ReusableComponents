@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Webmap Template</title>
+        <title>Webmap Float Template</title>
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <meta name="created" content="">
         <meta name="description" content="">
@@ -23,7 +23,9 @@
 
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&amp;display=swap">
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css">
+        
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 800px)">
         
@@ -31,46 +33,71 @@
     </head>
 
     <body>
-        <nav class="flex-row flex-between">
-            <div class="flex-row">
-                <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
-                <span class="nav-vr">|</span>
-                <img src="./imgs/project-logo.png" alt="project logo" class="nav-logos">
-                <span class="nav-vr">|</span>
-                <button id="modal-toggle" class="nav-btn nav-links">about</button>
-            </div>
-
-            <div>
-                <a href="/" class="nav-links">other</a>
-                <a href="/" class="nav-links">links</a>
-            </div>
+        <nav class="flex-row flex-align-center">
+            <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
+            
+            <span class="nav-vr">|</span>
+            
+            <img src="./imgs/project-logo.png" alt="project logo" class="project-logo" title="bruhhh">
+            
+            <h1>Project Name</h1>
+            
+            <span class="nav-vr">|</span>
+            
+            <button id="modal-toggle" class="nav-btn">about</button>
         </nav>
 
-        <main id="main-content-wrapper" class="flex-row flex-between">
-            <article id="sidebar">
-                <div id="sidebar-content">
-                    <h1>Content Header</h1>
+        <main class="flex-row flex-between main-content-wrapper">
+            <section class="sidebar">
+                <div class="sidebar-content">
+                    <h2 class="sidebar-h2">Content Header</h2>
 
                     <p>content goes here</p>
+
+                    <form id="toggle-form" class="sidebar-form">
+                        <p>form toggles go here</p>
+                    </form>
                 </div>
 
-                <footer class="flex-column">
-                    footer
+                <footer>
+                    contact: <a href="mailto:">name</a>
                 </footer>
-            </article>
+            </section>
 
-            <div id="map"></div>
+            <div id="map" class="map">
+                <div id="legend-container" class="legend-container">
+                </div>
+            </div>
         </main>
 
-        <div id="modal" role="dialog">
-            <div id="modal-content">
-                <span id="close-modal">&times;</span>
+        <div id="modal" class="modal" role="dialog">
+            <div class="modal-content">
+                <span id="close-modal" class="close-modal">&times;</span>
         
-                <h2 class="modal-content-subheader">Modal content goes here</h2>
-                <p>About the project, methodology, disclaimer, contact info, etc.</p>
+                <h2 class="modal-content-subheader">Project Name</h2>
+
+                <section class="modal-section">
+                    <h3>About</h3>
+                    <p>Use this template to bootstrap a web map with robust context needed in the sidebar. Charts and other data viz, explanations, anything goes in the sidebar.</p>
+                </section>
+
+                <hr class="modal-hr" />
+
+                <section class="modal-section">
+                    <h3>Methodology</h3>
+                    <p>lorem ipsum...</p>
+                </section>
+
+                <hr class="modal-hr" />
+
+                <section class="modal-section">
+                    <h3>Disclaimer</h3>
+                    <p>lorem ipsum...</p>
+                </section>
             </div>
         </div>
 
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
     </body>
 </html>

@@ -14,6 +14,7 @@ h1 {
 fieldset {
     font-size: 0.8em;
     border-radius: var(--border-radius);
+    background-color: white;
 }
 select, input {
     cursor: pointer;
@@ -186,11 +187,10 @@ nav {
 }
 .sidebar-form {
     margin: var(--padding) auto;
-}
-.sidebar-fieldset {
-    background: white;
+    padding: var(--padding);
+    box-shadow: var(--box-shadow-half);
     border-radius: var(--border-radius);
-    border: 2px solid var(--theme-dvrpc);
+    background-color: white;
 }
 .sidebar-fieldset label {
     margin-right: 5px;

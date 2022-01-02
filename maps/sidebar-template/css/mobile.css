@@ -10,6 +10,9 @@ body {
 .modal-content {
     width: 85%;
 }
+.modal-section, .modal-hr {
+    width: unset;
+}
 /* END Modal */
 
 
@@ -44,6 +47,7 @@ body {
 }
 .legend-container {
     min-width: unset;
+    max-width: 150px;
     min-height: unset;
 }
 .mapboxgl-ctrl-geocoder {

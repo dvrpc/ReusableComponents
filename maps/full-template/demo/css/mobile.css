@@ -7,8 +7,11 @@ body {
 
 
 /* Modal */
-#modal-content {
+.modal-content {
     width: 85%;
+}
+.modal-section, .modal-hr {
+    width: unset;
 }
 /* END Modal */
 
@@ -23,6 +26,9 @@ body {
 
 
 /* Main Webmap Area */
+.overlay {
+    width: 13em;
+}
 .mapboxgl-ctrl-geocoder {
     font-size: 0.9rem;
     min-width: unset;
