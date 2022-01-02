@@ -24,7 +24,7 @@ const layers = {
             'line-color': '#e7e7e7'
         }
     }
-    // add more layers here
+    // add default layers here
 }
 
 export default layers
