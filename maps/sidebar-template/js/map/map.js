@@ -24,6 +24,8 @@ const makeRegionalExtentEls = map => {
     const icon = document.createElement('img')
 
     button.type = 'button'
+    button.title = 'Zoom to regional extent'
+    
     icon.id = 'regional-extent-img'
     icon.alt = 'DVRPC Alternative Logo'
     icon.src = 'https://www.dvrpc.org/img/banner/new/bug-favicon.png'

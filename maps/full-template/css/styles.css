@@ -180,6 +180,12 @@ nav {
 .popup-span:not(:last-of-type) {
     border-bottom: 1px dotted var(--theme-black);
 }
+.mapboxgl-ctrl-geocoder, .mapboxgl-ctrl-geocoder .suggestions, .mapboxgl-ctrl-group:not(:empty) {
+    box-shadow: var(--box-shadow);
+}
+.mapboxgl-ctrl-geocoder--input {
+    cursor: text;
+}
 /* END Main Webmap Area */
 
 
