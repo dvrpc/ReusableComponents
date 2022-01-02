@@ -16,7 +16,8 @@
 - Add toggles within the `form` element in the `overlay` component.<strong> make sure to set toggle `value` attribute to its respective layer id, defined in either `mapLayers` or `secondaryMapLayers`</strong>
 - The rest of the content and styles are up to you. Happy hacking. 
 
-## DEMO
-- spin up or browse through the demo folder to get a sense of how everything hooks up to make a working map.
-- ![desktop screenshot](./desktop.png)
-- ![mobile screenshot](./mobile.png)
+## Demo
+- browse through the demo folder to get a sense of how everything hooks up to make a working map.
+- [View live demo here]()
+- desktop preview:
+![desktop screenshot](./desktop.png)
