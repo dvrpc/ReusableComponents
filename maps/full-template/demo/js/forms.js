@@ -1,4 +1,4 @@
-import secondaryMapLayers from './secondaryMapLayers.js'
+import secondaryMapLayers from './map/secondaryMapLayers.js'
 
 // handles: checkboxes, toggles, radio buttons
 const handleFormInputs = (inputs, map) => {
