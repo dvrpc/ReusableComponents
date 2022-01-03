@@ -47,7 +47,7 @@ const handleFormSelect = (selects, map) => {
                 // add layer on first pass
                 if(selected) {
                     const mapLayer = secondaryMapLayers[layer]
-                    map.addLayer(mapLayer)
+                    map.addLayer(mapLayer, 'road-label')
                 }
             }            
         })
