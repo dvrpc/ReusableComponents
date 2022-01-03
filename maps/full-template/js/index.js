@@ -1,6 +1,6 @@
-import makeMap from './map.js'
-import sources from './mapSources.js'
-import mapLayers from './mapLayers.js'
+import makeMap from './map/map.js'
+import sources from './map/mapSources.js'
+import mapLayers from './map/mapLayers.js'
 import handleModal from './modal.js'
 import handleForms from './forms.js'
 import handleLegend from './legend.js'
@@ -20,7 +20,7 @@ const map = makeMap()
 
 map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
-    for(const layer in mapLayers) map.addLayer(mapLayers[layer])
+    for(const layer in mapLayers) map.addLayer(mapLayers[layer], 'road-label')
 
     // add map events here (click, mousemove, etc)
 

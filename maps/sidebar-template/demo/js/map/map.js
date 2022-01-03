@@ -4,18 +4,19 @@ const initMap = () => {
     return new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [-75.3, 40.071],
-        zoom: 8.25
+        center: [-75.2273, 40.071],
+        bounds: [[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]
     })
 }
 
 const makeRegionalExtentEls = map => {
-    // coordinates and zoom level for regional extent
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.425
-
+    let zoom = window.innerWidth <= 420 ? 7.3 : 8.42
+    
     const dvrpcExtent = {
-        center: [-75.3, 40.071],
-        zoom: zoom
+        center: [-75.2273, 40.071],
+        zoom: zoom,
+        pitch: 0,
+        bearing: 0
     }
 
     // create custom button elements
@@ -23,6 +24,8 @@ const makeRegionalExtentEls = map => {
     const icon = document.createElement('img')
 
     button.type = 'button'
+    button.title = 'Zoom to regional extent'
+    
     icon.id = 'regional-extent-img'
     icon.alt = 'DVRPC Alternative Logo'
     icon.src = 'https://www.dvrpc.org/img/banner/new/bug-favicon.png'

@@ -5,7 +5,7 @@ const createLegendItem = val => {
     const legendDetails = legendConfig[val]
 
     return `
-        <div class="flex-row flex-between flex-align-center legend-item">
+        <div class="flex-row flex-align-center legend-item">
             <span class="legend-icon-${legendDetails.iconType}" style="background-color:${legendDetails.color};"></span>
             <span class="legend-text">${legendDetails.label}</span>
         </div>

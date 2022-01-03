@@ -6,7 +6,7 @@ const layers = {
         "source-layer": "county",
         "paint": {
             'line-width': 2.5,
-            'line-color': '#f7f7f7'
+            'line-color': '#505a5e'
         },
         "filter": [
             "==",
@@ -21,10 +21,26 @@ const layers = {
         "source-layer": "municipalities",
         "paint": {
             'line-width': 0.5,
-            'line-color': '#e7e7e7'
+            'line-color': '#4a5c64'
         }
     }
-    // add more layers here
+    // add default layers here
+    ,
+    'truck-v2': {
+        'id': 'truck-v2',
+        'type': 'circle',
+        'source': 'freight-inrix',
+        'source-layer': 'truck',
+        'paint': {
+            'circle-radius': 1.5,
+            'circle-color': 'green'
+        },
+        'filter': [
+            '==',
+            'v',
+            2
+        ]
+    }
 }
 
 export default layers

@@ -22,7 +22,7 @@ select, input {
 }
 select {
     border-radius: var(--border-radius);
-    padding: 0.5em 0.75em;
+    padding: 0.5em;
     background-color: white;
 }
 input[type=radio], input[type=checkbox] {
@@ -193,7 +193,7 @@ nav {
 }
 .sidebar-h3 {
     color: var(--theme-dvrpc-accent);
-    font-size: 1.125em;
+    font-size: 1.25em;
     font-weight: 400;
     margin-top: var(--padding-double);
 }

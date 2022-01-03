@@ -1,4 +1,4 @@
-import secondaryMapLayers from './secondaryMapLayers.js'
+import secondaryMapLayers from './map/secondaryMapLayers.js'
 
 // handles: checkboxes, toggles, radio buttons
 const handleFormInputs = (inputs, map) => {
@@ -47,7 +47,7 @@ const handleFormSelect = (selects, map) => {
                 // add layer on first pass
                 if(selected) {
                     const mapLayer = secondaryMapLayers[layer]
-                    map.addLayer(mapLayer)
+                    map.addLayer(mapLayer, 'road-label')
                 }
             }            
         })
