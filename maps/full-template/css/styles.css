@@ -226,6 +226,11 @@ nav {
     background-color: var(--theme-white);
     font-size: inherit;
 }
+.label-select {
+    /* same as fieldset */
+    font-size: 0.8em;
+    margin-bottom: var(--padding);
+}
 .overlay-container {
     padding: var(--padding);
     margin-top: var(--padding-half);
@@ -243,7 +248,7 @@ nav {
     background-color: var(--theme-white);
 }
 .legend-item {
-    margin: 10px 0;
+    margin: 10px 15px 10px 0;
     width: max-content;
 }
 .legend-icon-line {
