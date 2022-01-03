@@ -52,32 +52,38 @@
                 <div class="sidebar-content">
                     <h2 class="sidebar-h2">Content Header</h2>
 
+                    <details class="sidebar-details" open>
+                        <summary>
+                            <h3 class="sidebar-h3 summary-h3">toggle layers</h3>
+                        </summary>
+
+                        <form id="toggle-form" class="sidebar-form">
+                            <label class="flex-row flex-align-center flex-between label-select">
+                                freight inrix:
+    
+                                <select>
+                                    <option value="truck-v2">truck v-2</option>
+                                    <option value="truck-v3">truck v-3</option>
+                                </select>
+                            </label>
+    
+                            <fieldset>
+                                <legend>access score</legend>
+    
+                                <label class="label-input">
+                                    walk buffer
+                                    <input type="checkbox" value="walk-buffer">
+                                </label>
+            
+                                <label class="label-input">
+                                    cycle buffer
+                                    <input type="checkbox" value="cycle-buffer">
+                                </label>
+                            </fieldset> 
+                        </form>
+                    </details>
+
                     <p>content goes here</p>
-
-                    <form id="toggle-form" class="sidebar-form">
-                        <fieldset class="overlay-form-toggle-group flex-column">
-                            <legend>freight inrix</legend>
-
-                            <select class="overlay-select">
-                                <option value="truck-v2">truck v-2</option>
-                                <option value="truck-v3">truck v-3</option>
-                            </select>
-                        </fieldset>
-
-                        <fieldset class="overlay-form-toggle-group">
-                            <legend>access score</legend>
-
-                            <label class="label-input">
-                                walk buffer
-                                <input type="checkbox" value="walk-buffer">
-                            </label>
-        
-                            <label class="label-input">
-                                cycle buffer
-                                <input type="checkbox" value="cycle-buffer">
-                            </label>
-                        </fieldset> 
-                    </form>
                 </div>
 
                 <footer>
@@ -87,7 +93,7 @@
 
             <div id="map" class="map">
                 <div class="legend-container">
-                    <h3 class="legend-title">legend</h3>
+                    <h4 class="legend-title">legend</h4>
 
                     <div id="legend-container"></div>
                 </div>

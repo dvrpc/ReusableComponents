@@ -10,6 +10,7 @@ body {
 }
 h1 {
     text-align: center;
+    font-size: inherit;
 }
 summary {
     cursor: pointer;
@@ -24,6 +25,7 @@ select, input {
 select {
     border-radius: var(--border-radius);
     padding: 0.5em 0.25em;
+    background-color: inherit;
 }
 input[type=radio], input[type=checkbox] {
     margin-right: 0.75em;
@@ -145,9 +147,9 @@ nav {
     cursor: pointer;
 }
 .nav-vr {
-    margin: 0 5px;
-    font-size: 1.25em;
-    font-weight: 400;
+    margin: 0 var(--padding);
+    font-size: 1.5em;
+    font-weight: 200;
 }
 #dvrpc-logo {
     display: block;
@@ -224,6 +226,11 @@ nav {
     background-color: var(--theme-white);
     font-size: inherit;
 }
+.label-select {
+    /* same as fieldset */
+    font-size: 0.8em;
+    margin-bottom: var(--padding);
+}
 .overlay-container {
     padding: var(--padding);
     margin-top: var(--padding-half);
@@ -241,12 +248,12 @@ nav {
     background-color: var(--theme-white);
 }
 .legend-item {
-    margin: 10px 0;
+    margin: 10px 15px 10px 0;
     width: max-content;
 }
 .legend-icon-line {
     display: block;
-    width: 5px;
+    width: 2.5px;
     height: 25px;
     margin-right: 12.5px;
     transform: rotate(45deg);
@@ -255,9 +262,9 @@ nav {
 }
 .legend-icon-circle {
     display: block;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    margin-right: 9px;
     border-radius: 50%;
 }
 .legend-text {
