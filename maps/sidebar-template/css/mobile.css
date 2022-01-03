@@ -37,6 +37,9 @@ body {
 .sidebar {
     width: 100%;
 }
+.sidebar-content, footer {
+    height: unset;
+}
 /* END Sidebar */
 
 
