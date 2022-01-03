@@ -25,6 +25,22 @@ const layers = {
         }
     }
     // add default layers here
+    ,
+    'truck-v2': {
+        'id': 'truck-v2',
+        'type': 'circle',
+        'source': 'freight-inrix',
+        'source-layer': 'truck',
+        'paint': {
+            'circle-radius': 1.5,
+            'circle-color': 'green'
+        },
+        'filter': [
+            '==',
+            'v',
+            2
+        ]
+    }
 }
 
 export default layers

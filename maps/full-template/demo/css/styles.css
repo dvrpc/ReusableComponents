@@ -241,7 +241,8 @@ nav {
     background-color: var(--theme-white);
 }
 .legend-item {
-    margin: 10px 30px 10px 0;
+    margin: 10px 0;
+    width: max-content;
 }
 .legend-icon-line {
     display: block;
@@ -249,6 +250,8 @@ nav {
     height: 25px;
     margin-right: 12.5px;
     transform: rotate(45deg);
+    /* account for transform */
+    margin-left: 7.5px;
 }
 .legend-icon-circle {
     display: block;

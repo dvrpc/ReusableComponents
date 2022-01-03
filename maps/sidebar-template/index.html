@@ -55,7 +55,28 @@
                     <p>content goes here</p>
 
                     <form id="toggle-form" class="sidebar-form">
-                        <p>form toggles go here</p>
+                        <fieldset class="overlay-form-toggle-group flex-column">
+                            <legend>freight inrix</legend>
+
+                            <select class="overlay-select">
+                                <option value="truck-v2">truck v-2</option>
+                                <option value="truck-v3">truck v-3</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="overlay-form-toggle-group">
+                            <legend>access score</legend>
+
+                            <label class="label-input">
+                                walk buffer
+                                <input type="checkbox" value="walk-buffer">
+                            </label>
+        
+                            <label class="label-input">
+                                cycle buffer
+                                <input type="checkbox" value="cycle-buffer">
+                            </label>
+                        </fieldset> 
                     </form>
                 </div>
 
@@ -65,7 +86,10 @@
             </section>
 
             <div id="map" class="map">
-                <div id="legend-container" class="legend-container">
+                <div class="legend-container">
+                    <h3 class="legend-title">legend</h3>
+
+                    <div id="legend-container"></div>
                 </div>
             </div>
         </main>
