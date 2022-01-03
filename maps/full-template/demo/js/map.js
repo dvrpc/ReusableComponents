@@ -1,11 +1,13 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
 const initMap = () => {
+    let zoom = window.innerWidth <= 420 ? 7.3 : 8.25
+
     return new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
         center: [-75.3, 40.071],
-        zoom: 8.25
+        zoom: zoom
     })
 }
 
