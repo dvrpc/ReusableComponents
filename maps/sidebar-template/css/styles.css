@@ -22,8 +22,8 @@ select, input, summary {
 }
 select {
     border-radius: var(--border-radius);
-    padding: 0.5em 0.25em;
-    background-color: inherit;
+    padding: 0.5em;
+    background-color: white;
 }
 input[type=radio], input[type=checkbox] {
     margin-right: 0.75em;
@@ -85,7 +85,8 @@ a {
 }
 .modal-content{
     position: relative;
-    background: #fff;
+    background: var(--theme-white);
+    color: var(--theme-black);
     width: 50em;
     padding: var(--padding-double);
     border-radius: var(--border-radius);
@@ -175,7 +176,8 @@ nav {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: var(--theme-white);
+    background-color: var(--theme-offwhite);
+    color: var(--theme-black);
     box-shadow: var(--box-shadow-half);
     z-index: 1;
 }
@@ -210,7 +212,7 @@ nav {
     padding: var(--padding-double);
     box-shadow: var(--box-shadow-half);
     border-radius: var(--border-radius);
-    background-color: white;
+    background-color: var(--theme-white);
 }
 .sidebar-fieldset label {
     margin-right: 5px;
@@ -243,6 +245,7 @@ nav {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     background-color: #fff;
+    color: var(--theme-black);
     z-index: 1;
     padding: var(--padding);
 }
@@ -278,13 +281,14 @@ nav {
     border-radius: 50%;
 }
 .legend-text {
-    font-size: 0.85em;
+    font-size: 1em;
 }
 .mapboxgl-ctrl-geocoder, .mapboxgl-ctrl-geocoder .suggestions, .mapboxgl-ctrl-group:not(:empty) {
     box-shadow: var(--box-shadow);
 }
 .mapboxgl-ctrl-geocoder--input {
     cursor: text;
+    color: var(--theme-black);
 }
 /* END Map */
 
@@ -297,7 +301,7 @@ footer {
     padding: var(--padding);
     box-shadow: var(--box-shadow);
     overflow-y: auto;
-    background-color: var(--theme-offwhite);
+    background-color: var(--theme-white);
     color: var(--theme-black);
 }
 /* END Footer */
